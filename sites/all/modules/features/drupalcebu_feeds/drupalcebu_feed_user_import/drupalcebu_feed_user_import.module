@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the DrupalCebu Feed User Import feature.
  */
+
+include_once 'drupalcebu_feed_user_import.features.inc';
