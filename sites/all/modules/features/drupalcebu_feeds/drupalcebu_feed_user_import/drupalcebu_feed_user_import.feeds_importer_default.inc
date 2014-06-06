@@ -64,6 +64,11 @@ function drupalcebu_feed_user_import_feeds_importer_default() {
             'target' => 'field_user_last_name',
             'unique' => FALSE,
           ),
+          4 => array(
+            'source' => 'Email Address',
+            'target' => 'field_user_email',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '1',
         'input_format' => 'plain_text',
