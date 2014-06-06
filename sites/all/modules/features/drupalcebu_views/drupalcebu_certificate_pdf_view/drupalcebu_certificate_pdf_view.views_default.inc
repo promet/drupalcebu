@@ -79,10 +79,10 @@ function drupalcebu_certificate_pdf_view_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'pdf_fields';
   $handler->display->display_options['path'] = 'drupal-craze2-certificate';
   $handler->display->display_options['default_page_format'] = 'LETTER';
-  $handler->display->display_options['margin_left'] = '190';
-  $handler->display->display_options['margin_top'] = '82';
+  $handler->display->display_options['margin_left'] = '145';
+  $handler->display->display_options['margin_top'] = '65';
   $handler->display->display_options['leading_template'] = '0';
-  $handler->display->display_options['template'] = 'certificate_draft.pdf';
+  $handler->display->display_options['template'] = 'certificate_template.pdf';
   $handler->display->display_options['succeed_template'] = '0';
   $handler->display->display_options['default_font_style'] = array(
     'b' => 'b',
@@ -91,7 +91,7 @@ function drupalcebu_certificate_pdf_view_views_default_views() {
     'd' => 0,
     'o' => 0,
   );
-  $handler->display->display_options['default_font_size'] = '50';
+  $handler->display->display_options['default_font_size'] = '30';
   $handler->display->display_options['default_text_align'] = 'C';
   $handler->display->display_options['default_font_color'] = '1B5A8F';
   $export['craze_cebu_certificate'] = $view;
