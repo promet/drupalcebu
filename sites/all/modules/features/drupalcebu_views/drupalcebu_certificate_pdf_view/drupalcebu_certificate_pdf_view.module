@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCebu Certificate Pdf View feature.
+ */
+
+include_once 'drupalcebu_certificate_pdf_view.features.inc';
