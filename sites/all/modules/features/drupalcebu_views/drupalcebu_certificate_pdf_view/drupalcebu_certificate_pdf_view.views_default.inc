@@ -94,6 +94,48 @@ function drupalcebu_certificate_pdf_view_views_default_views() {
   $handler->display->display_options['default_font_size'] = '30';
   $handler->display->display_options['default_text_align'] = 'C';
   $handler->display->display_options['default_font_color'] = '1B5A8F';
+
+  /* Display: PDF Page (Account) */
+  $handler = $view->new_display('pdf', 'PDF Page (Account)', 'pdf_2');
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'administer users';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'pdf_unformatted';
+  $handler->display->display_options['row_plugin'] = 'pdf_fields';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: User: Uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'users';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['path'] = 'user/%/certificate';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Certificate';
+  $handler->display->display_options['menu']['weight'] = '10';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $handler->display->display_options['default_page_format'] = 'LETTER';
+  $handler->display->display_options['margin_left'] = '145';
+  $handler->display->display_options['margin_top'] = '65';
+  $handler->display->display_options['leading_template'] = '0';
+  $handler->display->display_options['template'] = 'certificate_template.pdf';
+  $handler->display->display_options['succeed_template'] = '0';
+  $handler->display->display_options['default_font_style'] = array(
+    'b' => 'b',
+    'i' => 0,
+    'u' => 0,
+    'd' => 0,
+    'o' => 0,
+  );
+  $handler->display->display_options['default_font_size'] = '30';
+  $handler->display->display_options['default_text_align'] = 'C';
+  $handler->display->display_options['default_font_color'] = '1B5A8F';
   $export['craze_cebu_certificate'] = $view;
 
   return $export;
