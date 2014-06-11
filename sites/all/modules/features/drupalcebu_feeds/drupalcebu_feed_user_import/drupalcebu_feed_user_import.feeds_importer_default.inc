@@ -55,18 +55,23 @@ function drupalcebu_feed_user_import_feeds_importer_default() {
             'unique' => 1,
           ),
           2 => array(
+            'source' => 'Email Address',
+            'target' => 'field_user_email',
+            'unique' => FALSE,
+          ),
+          3 => array(
             'source' => 'First Name',
             'target' => 'field_user_first_name',
             'unique' => FALSE,
           ),
-          3 => array(
+          4 => array(
             'source' => 'Last Name',
             'target' => 'field_user_last_name',
             'unique' => FALSE,
           ),
-          4 => array(
-            'source' => 'Email Address',
-            'target' => 'field_user_email',
+          5 => array(
+            'source' => 'Suffix',
+            'target' => 'field_user_suffix',
             'unique' => FALSE,
           ),
         ),

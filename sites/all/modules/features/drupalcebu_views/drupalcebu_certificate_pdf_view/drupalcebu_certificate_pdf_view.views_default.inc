@@ -42,13 +42,20 @@ function drupalcebu_certificate_pdf_view_views_default_views() {
   $handler->display->display_options['fields']['field_user_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_user_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_user_first_name']['element_label_colon'] = FALSE;
+  /* Field: User: Suffix */
+  $handler->display->display_options['fields']['field_user_suffix']['id'] = 'field_user_suffix';
+  $handler->display->display_options['fields']['field_user_suffix']['table'] = 'field_data_field_user_suffix';
+  $handler->display->display_options['fields']['field_user_suffix']['field'] = 'field_user_suffix';
+  $handler->display->display_options['fields']['field_user_suffix']['label'] = '';
+  $handler->display->display_options['fields']['field_user_suffix']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_user_suffix']['element_label_colon'] = FALSE;
   /* Field: User: Last Name */
   $handler->display->display_options['fields']['field_user_last_name']['id'] = 'field_user_last_name';
   $handler->display->display_options['fields']['field_user_last_name']['table'] = 'field_data_field_user_last_name';
   $handler->display->display_options['fields']['field_user_last_name']['field'] = 'field_user_last_name';
   $handler->display->display_options['fields']['field_user_last_name']['label'] = '';
   $handler->display->display_options['fields']['field_user_last_name']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_user_last_name']['alter']['text'] = '[field_user_first_name] [field_user_last_name]';
+  $handler->display->display_options['fields']['field_user_last_name']['alter']['text'] = '[field_user_first_name] [field_user_last_name] [field_user_suffix]';
   $handler->display->display_options['fields']['field_user_last_name']['element_label_colon'] = FALSE;
   /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
