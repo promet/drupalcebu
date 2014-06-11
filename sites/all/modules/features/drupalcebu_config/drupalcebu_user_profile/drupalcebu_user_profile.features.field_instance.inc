@@ -19,10 +19,9 @@ function drupalcebu_user_profile_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
+        'type' => 'hidden',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'user',
@@ -125,13 +124,9 @@ function drupalcebu_user_profile_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'mailchimp_lists',
-        'settings' => array(
-          'interest_groups' => array(),
-          'show_interest_groups' => FALSE,
-        ),
-        'type' => 'mailchimp_lists_subscribe_default',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'user',
@@ -174,7 +169,7 @@ function drupalcebu_user_profile_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'user',
