@@ -1,0 +1,8 @@
+name = DrupalCebu Tags Vocabulary
+description = Tags vocabulary to be used in Blogs.
+core = 7.x
+package = Drupal Cebu Vocabularies
+dependencies[] = features
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[taxonomy][] = tags
