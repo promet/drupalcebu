@@ -11,6 +11,7 @@ drupalcebu_blog_view
 drupalcebu_certificate_pdf_view
 drupalcebu_feed_user_import
 drupalcebu_mail_chimp
+drupalcebu_meetup_api
 drupalcebu_tags_vocabulary
 drupalcebu_user_profile
 entity
@@ -29,6 +30,7 @@ libraries
 list
 mailchimp
 mailchimp_lists
+meetup_api
 menu
 node
 number

@@ -1,6 +1,6 @@
 name = DrupalCebu Mail Chimp
 core = 7.x
-package = Features
+package = Drupal Cebu Config
 dependencies[] = ctools
 dependencies[] = mailchimp
 dependencies[] = mailchimp_lists

@@ -24,12 +24,12 @@ then
   echo "Running $env build"
   source "$env_path/build.sh"
 fi
+echo "Enabling modules we need on every environment.";
+$drush en $(cat $build_path/mods_enabled | tr '\n' ' ') -y
 echo "Disabling all modules we do not need on any environment.";
 $drush dis $(cat $build_path/mods_purge | tr '\n' ' ') -y
 echo "Uninstalling modules we do not need on any environment.";
 $drush pm-uninstall $(cat $build_path/mods_purge | tr '\n' ' ') -y
-echo "Enabling modules we need on every environment.";
-$drush en $(cat $build_path/mods_enabled | tr '\n' ' ') -y
 echo "Clearing caches.";
 $drush cc all -y
 echo "Reverting all features.";
