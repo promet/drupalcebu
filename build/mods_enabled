@@ -29,6 +29,7 @@ libraries
 list
 mailchimp
 mailchimp_lists
+meetup_api
 menu
 node
 number
