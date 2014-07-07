@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCebu Blog View feature.
+ */
+
+include_once 'drupalcebu_blog_view.features.inc';

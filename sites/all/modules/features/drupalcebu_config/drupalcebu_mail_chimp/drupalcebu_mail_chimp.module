@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the DrupalCebu Mail Chimp feature.
- */
-
-include_once 'drupalcebu_mail_chimp.features.inc';
