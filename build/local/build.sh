@@ -2,7 +2,7 @@
 echo "Dropping database.";
 $drush sql-drop -y
 echo "Installing database.";
-$drush sqlc -y < $env_path/ref_db/pcpcDB.sql
+$drush sqlc -y < $env_path/ref_db/drupalcebuDB.sql
 echo "Enabling modules needed for local development.";
 $drush en $(cat $env_path/mods_enabled | tr '\n' ' ') -y -v
 echo "Setting password for local";
