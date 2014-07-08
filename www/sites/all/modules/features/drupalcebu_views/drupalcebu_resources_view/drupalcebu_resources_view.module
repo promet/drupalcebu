@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCebu Resources View feature.
+ */
+
+include_once 'drupalcebu_resources_view.features.inc';
