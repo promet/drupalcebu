@@ -8,9 +8,12 @@ dashboard
 dblog
 drupalcebu_blog
 drupalcebu_blog_view
+drupalcebu_resource
+drupalcebu_resources_view
 drupalcebu_certificate_pdf_view
 drupalcebu_feed_user_import
 drupalcebu_mail_chimp
+drupalcebu_main_menu
 drupalcebu_meetup_api
 drupalcebu_tags_vocabulary
 drupalcebu_user_profile
@@ -27,6 +30,7 @@ image
 job_scheduler
 jquery_update
 libraries
+link
 list
 mailchimp
 mailchimp_lists
