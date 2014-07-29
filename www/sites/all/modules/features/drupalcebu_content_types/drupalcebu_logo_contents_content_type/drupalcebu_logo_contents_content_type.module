@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCebu Logo Contents Content Type feature.
+ */
+
+include_once 'drupalcebu_logo_contents_content_type.features.inc';

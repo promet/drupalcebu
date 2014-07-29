@@ -1,5 +1,6 @@
 admin_menu
 block
+ckeditor
 color
 comment
 contextual
@@ -12,6 +13,7 @@ drupalcebu_resource
 drupalcebu_resources_view
 drupalcebu_certificate_pdf_view
 drupalcebu_feed_user_import
+drupalcebu_logo_contents_content_type
 drupalcebu_mail_chimp
 drupalcebu_main_menu
 drupalcebu_meetup_api
