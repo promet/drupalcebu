@@ -2,7 +2,7 @@
 echo "Enabling modules needed for dev environment.";
 $drush en $(cat $env_path/mods_enabled | tr '\n' ' ') -y -v
 echo "Setting password for local";
-$drush upwd admin --password=drupaladm1n -y
+$drush upwd admin --password=drupaladm1n --account-mail drupalcebu@gmail.com -y
 echo "Clearing caches.";
 $drush cc all -y
 echo "Disabling css and js caching.";
