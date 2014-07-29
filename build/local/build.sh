@@ -4,7 +4,7 @@ $drush sql-drop -y
 echo "Installing database.";
 # $drush sqlc -y < $env_path/ref_db/drupalcebuDB.sql
 echo "Installing database.";
-$drush si standard -y --account-pass='drupaladm1n'
+$drush si standard -y --account-pass='drupaladm1n' --account-mail='drupalcebu@gmail.com'
 echo "Clearing registry.";
 $drush cc all -y
 echo "Disabling modules not needed for local development.";
