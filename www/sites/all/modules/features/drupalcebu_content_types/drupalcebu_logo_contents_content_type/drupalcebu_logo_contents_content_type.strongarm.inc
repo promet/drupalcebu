@@ -30,6 +30,20 @@ function drupalcebu_logo_contents_content_type_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'formblock_expose_logo_contest';
+  $strongarm->value = 1;
+  $export['formblock_expose_logo_contest'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'formblock_show_help_logo_contest';
+  $strongarm->value = 1;
+  $export['formblock_show_help_logo_contest'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_logo_contest';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -47,9 +61,7 @@ function drupalcebu_logo_contents_content_type_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_logo_contest';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_logo_contest'] = $strongarm;
 
   $strongarm = new stdClass();

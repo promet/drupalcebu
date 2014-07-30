@@ -1,0 +1,6 @@
+name = DrupalCebu Sitewide Block Settings
+core = 7.x
+package = Drupal Cebu Config
+dependencies[] = blockexport
+features[blockexport_settings][] = block_settings
+features[features_api][] = api:2
