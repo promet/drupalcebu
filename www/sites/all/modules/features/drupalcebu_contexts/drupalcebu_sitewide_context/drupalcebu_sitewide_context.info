@@ -3,6 +3,7 @@ core = 7.x
 package = Drupal Cebu Contexts
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = search
 features[context][] = sitewide_context
 features[ctools][] = context:context:3
 features[features_api][] = api:2

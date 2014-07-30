@@ -21,6 +21,7 @@ drupalcebu_main_menu
 drupalcebu_meetup_api
 drupalcebu_sitewide_block_settings
 drupalcebu_sitewide_context
+drupalcebu_site_info_config
 drupalcebu_tags_vocabulary
 drupalcebu_text_format_settings
 drupalcebu_user_profile

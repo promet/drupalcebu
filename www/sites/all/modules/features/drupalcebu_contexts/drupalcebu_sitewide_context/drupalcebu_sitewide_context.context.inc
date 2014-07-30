@@ -16,8 +16,37 @@ function drupalcebu_sitewide_context_context_default_contexts() {
   $context->name = 'sitewide_context';
   $context->description = 'Sitewide blocks configurations.';
   $context->tag = 'blocks';
-  $context->conditions = array();
-  $context->reactions = array();
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'system-navigation' => array(
+          'module' => 'system',
+          'delta' => 'navigation',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'user-login' => array(
+          'module' => 'user',
+          'delta' => 'login',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+        'search-form' => array(
+          'module' => 'search',
+          'delta' => 'form',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables

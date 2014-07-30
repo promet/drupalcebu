@@ -2,7 +2,6 @@ name = DrupalCebu Blog
 description = Blog content type.
 core = 7.x
 package = Drupal Cebu Content Types
-dependencies[] = drupalcebu_tags_vocabulary
 dependencies[] = features
 dependencies[] = strongarm
 dependencies[] = taxonomy

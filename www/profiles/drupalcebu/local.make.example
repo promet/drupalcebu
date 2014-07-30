@@ -1,0 +1,91 @@
+; drupalcebu make file for local development
+core = "7.x"
+api = "2"
+
+projects[drupal][version] = "7.x"
+; include the d.o. profile base
+includes[] = "drupal-org.make"
+
+; +++++ TODO modules without versions +++++
+
+projects[drupalcebu_inline_registration_settings][version] = "" ; TODO add version
+projects[drupalcebu_inline_registration_settings][subdir] = "custom"
+
+projects[drupalcebu_mail_chimp][version] = "" ; TODO add version
+projects[drupalcebu_mail_chimp][subdir] = "custom"
+
+projects[drupalcebu_meetup_api][version] = "" ; TODO add version
+projects[drupalcebu_meetup_api][subdir] = "custom"
+
+projects[drupalcebu_sitewide_block_settings][version] = "" ; TODO add version
+projects[drupalcebu_sitewide_block_settings][subdir] = "custom"
+
+projects[drupalcebu_text_format_settings][version] = "" ; TODO add version
+projects[drupalcebu_text_format_settings][subdir] = "custom"
+
+projects[drupalcebu_user_profile][version] = "" ; TODO add version
+projects[drupalcebu_user_profile][subdir] = "custom"
+
+projects[drupalcebu_blog][version] = "" ; TODO add version
+projects[drupalcebu_blog][subdir] = "custom"
+
+projects[drupalcebu_logo_contents_content_type][version] = "" ; TODO add version
+projects[drupalcebu_logo_contents_content_type][subdir] = "custom"
+
+projects[drupalcebu_resource][version] = "" ; TODO add version
+projects[drupalcebu_resource][subdir] = "custom"
+
+projects[drupalcebu_logo_contest_context][version] = "" ; TODO add version
+projects[drupalcebu_logo_contest_context][subdir] = "custom"
+
+projects[drupalcebu_sitewide_context][version] = "" ; TODO add version
+projects[drupalcebu_sitewide_context][subdir] = "custom"
+
+projects[drupalcebu_feed_user_import][version] = "" ; TODO add version
+projects[drupalcebu_feed_user_import][subdir] = "custom"
+
+projects[drupalcebu_main_menu][version] = "" ; TODO add version
+projects[drupalcebu_main_menu][subdir] = "custom"
+
+projects[drupalcebu_blog_view][version] = "" ; TODO add version
+projects[drupalcebu_blog_view][subdir] = "custom"
+
+projects[drupalcebu_certificate_pdf_view][version] = "" ; TODO add version
+projects[drupalcebu_certificate_pdf_view][subdir] = "custom"
+
+projects[drupalcebu_resources_view][version] = "" ; TODO add version
+projects[drupalcebu_resources_view][subdir] = "custom"
+
+projects[drupalcebu_tags_vocabulary][version] = "" ; TODO add version
+projects[drupalcebu_tags_vocabulary][subdir] = "custom"
+
+; +++++ Libraries +++++
+
+; fpdi
+libraries[fpdi][directory_name] = "fpdi"
+libraries[fpdi][type] = "library"
+libraries[fpdi][destination] = "libraries"
+libraries[fpdi][download][type] = "get"
+libraries[fpdi][download][url] = "" ; TODO add download URI
+
+; mailchimp
+libraries[mailchimp][directory_name] = "mailchimp"
+libraries[mailchimp][type] = "library"
+libraries[mailchimp][destination] = "libraries"
+libraries[mailchimp][download][type] = "get"
+libraries[mailchimp][download][url] = "" ; TODO add download URI
+
+; meetup_api
+libraries[meetup_api][directory_name] = "meetup_api"
+libraries[meetup_api][type] = "library"
+libraries[meetup_api][destination] = "libraries"
+libraries[meetup_api][download][type] = "get"
+libraries[meetup_api][download][url] = "" ; TODO add download URI
+
+; tcpdf
+libraries[tcpdf][directory_name] = "tcpdf"
+libraries[tcpdf][type] = "library"
+libraries[tcpdf][destination] = "libraries"
+libraries[tcpdf][download][type] = "get"
+libraries[tcpdf][download][url] = "" ; TODO add download URI
+

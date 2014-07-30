@@ -1,5 +1,6 @@
 name = DrupalCebu Logo Contents Content Type
 core = 7.x
+description = Node type for Logo Contest
 package = Drupal Cebu Content Types
 dependencies[] = ctools
 dependencies[] = drupalcebu_blog

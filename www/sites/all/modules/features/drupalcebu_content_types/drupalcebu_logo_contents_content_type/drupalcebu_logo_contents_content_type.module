@@ -5,3 +5,13 @@
  */
 
 include_once 'drupalcebu_logo_contents_content_type.features.inc';
+
+/**
+ * Implements hook_form_alter()
+ */
+function drupalcebu_logo_contents_content_type_form_alter(&$form, &$form_state, $form_id) {
+  global $user;
+  if ($form_id == 'logo_contest_node_form') {
+    $form['field_logo_agreement']['#access'] = !$user->uid ? TRUE : FALSE ;
+  }
+}
