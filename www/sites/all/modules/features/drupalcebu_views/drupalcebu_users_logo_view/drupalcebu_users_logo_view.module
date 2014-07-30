@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCebu Users Logo View feature.
+ */
+
+include_once 'drupalcebu_users_logo_view.features.inc';
