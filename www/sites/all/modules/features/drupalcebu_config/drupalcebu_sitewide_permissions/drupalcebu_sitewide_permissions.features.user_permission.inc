@@ -165,15 +165,6 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
     'module' => 'context_ui',
   );
 
-  // Exported permission: 'administer entityform types'.
-  $permissions['administer entityform types'] = array(
-    'name' => 'administer entityform types',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'entityform',
-  );
-
   // Exported permission: 'administer features'.
   $permissions['administer features'] = array(
     'name' => 'administer features',
@@ -462,15 +453,6 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'delete any entityform'.
-  $permissions['delete any entityform'] = array(
-    'name' => 'delete any entityform',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'entityform',
-  );
-
   // Exported permission: 'delete any logo_contest content'.
   $permissions['delete any logo_contest content'] = array(
     'name' => 'delete any logo_contest content',
@@ -505,15 +487,6 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: 'delete own entityform'.
-  $permissions['delete own entityform'] = array(
-    'name' => 'delete own entityform',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'entityform',
   );
 
   // Exported permission: 'delete own logo_contest content'.
@@ -579,15 +552,6 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'edit any entityform'.
-  $permissions['edit any entityform'] = array(
-    'name' => 'edit any entityform',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'entityform',
-  );
-
   // Exported permission: 'edit any logo_contest content'.
   $permissions['edit any logo_contest content'] = array(
     'name' => 'edit any logo_contest content',
@@ -622,15 +586,6 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: 'edit own entityform'.
-  $permissions['edit own entityform'] = array(
-    'name' => 'edit own entityform',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'entityform',
   );
 
   // Exported permission: 'edit own logo_contest content'.
@@ -811,24 +766,6 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'filter',
-  );
-
-  // Exported permission: 'view any entityform'.
-  $permissions['view any entityform'] = array(
-    'name' => 'view any entityform',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'entityform',
-  );
-
-  // Exported permission: 'view own entityform'.
-  $permissions['view own entityform'] = array(
-    'name' => 'view own entityform',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'entityform',
   );
 
   // Exported permission: 'view own unpublished content'.

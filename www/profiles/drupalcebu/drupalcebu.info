@@ -42,8 +42,6 @@ dependencies[] = user
 dependencies[] = devel
 dependencies[] = meetup_api
 dependencies[] = profiler_builder
-; Entityforms
-dependencies[] = entityform
 ; Feeds
 dependencies[] = feeds
 ; Fields
@@ -87,7 +85,7 @@ dependencies[] = drupalcebu_sitewide_context
 dependencies[] = drupalcebu_sitewide_permissions
 dependencies[] = drupalcebu_text_format_settings
 dependencies[] = drupalcebu_user_profile
-; dependencies[] = drupalcebu_users_logo_view
+dependencies[] = drupalcebu_users_logo_view
 dependencies[] = features_override
 
 ; ----------
