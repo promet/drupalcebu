@@ -42,6 +42,8 @@ dependencies[] = user
 dependencies[] = devel
 dependencies[] = meetup_api
 dependencies[] = profiler_builder
+; Google Analytics
+dependencies[] = googleanalytics
 ; Feeds
 dependencies[] = feeds
 ; Fields
@@ -70,6 +72,7 @@ dependencies[] = drupalcebu_blog
 dependencies[] = drupalcebu_blog_view
 dependencies[] = drupalcebu_certificate_pdf_view
 dependencies[] = drupalcebu_feed_user_import
+dependencies[] = drupalcebu_google_analytics_settings
 dependencies[] = drupalcebu_inline_registration_settings
 dependencies[] = drupalcebu_logo_contents_content_type
 dependencies[] = drupalcebu_logo_contest_context
