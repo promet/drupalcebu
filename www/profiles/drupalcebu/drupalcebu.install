@@ -277,6 +277,7 @@ function drupalcebu_install() {
     'drupalcebu_blog',
     'drupalcebu_blog_view',
     'drupalcebu_certificate_pdf_view',
+    'drupalcebu_google_analytics_settings',
     'drupalcebu_logo_contents_content_type',
     'drupalcebu_inline_registration_settings',
     'drupalcebu_logo_contest_context',
