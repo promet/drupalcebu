@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCebu Google Analytics Settings feature.
+ */
+
+include_once 'drupalcebu_google_analytics_settings.features.inc';
