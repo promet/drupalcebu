@@ -1,6 +1,7 @@
 ; Packaging information for drupalcebu
 name = "Drupal Cebu"
-description = ""
+description = "DrupalCebu Custom Profile"
+exclusive = "1"
 core = "7.x"
 ; ----------
 ; Dependencies
@@ -11,7 +12,6 @@ dependencies[] = admin_menu
 dependencies[] = ctools
 ; Context
 dependencies[] = context
-dependencies[] = context_ui
 ; Core
 dependencies[] = block
 dependencies[] = color
@@ -42,19 +42,26 @@ dependencies[] = user
 dependencies[] = devel
 dependencies[] = meetup_api
 dependencies[] = profiler_builder
+; Entityforms
+dependencies[] = entityform
 ; Feeds
 dependencies[] = feeds
 ; Fields
+dependencies[] = field_permissions
 dependencies[] = link
 ; MailChimp
 dependencies[] = mailchimp
 dependencies[] = mailchimp_lists
 ; Other
+dependencies[] = blockexport
 dependencies[] = entity
+dependencies[] = formblock
+dependencies[] = inline_registration
 dependencies[] = job_scheduler
 dependencies[] = libraries
 dependencies[] = strongarm
 ; User interface
+dependencies[] = ckeditor
 dependencies[] = jquery_update
 ; Views
 dependencies[] = views
@@ -65,22 +72,34 @@ dependencies[] = drupalcebu_blog
 dependencies[] = drupalcebu_blog_view
 dependencies[] = drupalcebu_certificate_pdf_view
 dependencies[] = drupalcebu_feed_user_import
+dependencies[] = drupalcebu_inline_registration_settings
+dependencies[] = drupalcebu_logo_contents_content_type
+dependencies[] = drupalcebu_logo_contest_context
 dependencies[] = drupalcebu_mail_chimp
 dependencies[] = drupalcebu_main_menu
 dependencies[] = drupalcebu_meetup_api
 dependencies[] = drupalcebu_resource
 dependencies[] = drupalcebu_resources_view
-dependencies[] = drupalcebu_tags_vocabulary
+dependencies[] = drupalcebu_sitewide_block_settings
+dependencies[] = drupalcebu_site_info_config
+dependencies[] = drupalcebu_sitewide_permissions
+dependencies[] = drupalcebu_sitewide_context
+dependencies[] = drupalcebu_sitewide_permissions
+dependencies[] = drupalcebu_text_format_settings
 dependencies[] = drupalcebu_user_profile
+; dependencies[] = drupalcebu_users_logo_view
 dependencies[] = features_override
 
 ; ----------
 ; Variables
 ; ----------
+variables[additional_settings__active_tab_logo_contest] = 'edit-formblock'
 variables[admin_theme] = 'seven'
 variables[context_block_rebuild_needed] = true
 variables[date_default_timezone] = 'Asia/Manila'
 variables[drupalcebu_group_urlname] = 'drupal-ph'
+variables[date_default_timezone] = 'Asia/Manila'
+variables[field_bundle_settings_node__logo_contest][extra_fields][form][title][weight] = '-5'
 variables[field_bundle_settings_node__resource][extra_fields][form][title][weight] = '-5'
 variables[field_bundle_settings_user__user][view_modes][full][custom_settings] = false
 variables[field_bundle_settings_user__user][extra_fields][form][account][weight] = '0'
@@ -90,23 +109,30 @@ variables[field_bundle_settings_user__user][extra_fields][display][summary][defa
   'visible' => false,
 )
 variables[filter_fallback_format] = 'plain_text'
+variables[formblock_expose_logo_contest] = 1
+variables[formblock_show_help_logo_contest] = 1
+variables[inline_registration_logo_contest] = 1
+variables[inline_registration_weight_logo_contest] = '-10'
 variables[job_scheduler_rebuild_all] = true
 variables[mailchimp_api_key] = 'd655dfce7c52228ac14aadac6875711b-us8'
 variables[mailchimp_batch_limit] = '100'
 variables[meetup_api_key] = '7ba596b1414726d336571172b4d454'
 variables[menu_options_blog][0] = 'main-menu'
+variables[menu_options_logo_contest][0] = 'main-menu'
 variables[menu_options_resource][0] = 'main-menu'
 variables[menu_parent_blog] = 'main-menu:0'
+variables[menu_parent_logo_contest] = 'main-menu:0'
 variables[menu_parent_resource] = 'main-menu:0'
 variables[node_admin_theme] = '1'
 variables[node_options_blog][0] = 'status'
 variables[node_options_page][0] = 'status'
 variables[node_options_resource][0] = 'status'
 variables[node_preview_blog] = '1'
+variables[node_preview_logo_contest] = '1'
 variables[node_preview_resource] = '1'
 variables[node_submitted_resource] = 1
 variables[theme_default] = 'bartik'
-variables[update_last_email_notification] = 1406611738
+variables[update_last_email_notification] = 1406622656
 variables[user_pictures] = '1'
 variables[user_picture_dimensions] = '1024x1024'
 variables[user_picture_file_size] = '800'

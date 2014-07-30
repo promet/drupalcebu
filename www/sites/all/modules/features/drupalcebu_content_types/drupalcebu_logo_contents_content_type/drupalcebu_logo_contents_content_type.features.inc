@@ -21,7 +21,7 @@ function drupalcebu_logo_contents_content_type_node_info() {
     'logo_contest' => array(
       'name' => t('Logo Contest'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Node type for Logo Contest'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

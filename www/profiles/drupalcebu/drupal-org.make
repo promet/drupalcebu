@@ -22,6 +22,9 @@ projects[meetup_api][subdir] = "contrib"
 projects[profiler_builder][version] = "1.1"
 projects[profiler_builder][subdir] = "contrib"
 
+projects[entityform][version] = "2.0-beta4"
+projects[entityform][subdir] = "contrib"
+
 projects[features][version] = "2.0"
 projects[features][subdir] = "contrib"
 
@@ -31,14 +34,26 @@ projects[features_override][subdir] = "contrib"
 projects[feeds][version] = "2.0-alpha8"
 projects[feeds][subdir] = "contrib"
 
+projects[field_permissions][version] = "1.0-beta2"
+projects[field_permissions][subdir] = "contrib"
+
 projects[link][version] = "1.2"
 projects[link][subdir] = "contrib"
 
 projects[mailchimp][version] = "3.1"
 projects[mailchimp][subdir] = "contrib"
 
+projects[blockexport][version] = "1.0"
+projects[blockexport][subdir] = "contrib"
+
 projects[entity][version] = "1.5"
 projects[entity][subdir] = "contrib"
+
+projects[formblock][version] = "1.0-alpha1"
+projects[formblock][subdir] = "contrib"
+
+projects[inline_registration][version] = "1.x-dev"
+projects[inline_registration][subdir] = "contrib"
 
 projects[job_scheduler][version] = "2.0-alpha3"
 projects[job_scheduler][subdir] = "contrib"
@@ -48,6 +63,9 @@ projects[libraries][subdir] = "contrib"
 
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
+
+projects[ckeditor][version] = "1.15"
+projects[ckeditor][subdir] = "contrib"
 
 projects[jquery_update][version] = "2.4"
 projects[jquery_update][subdir] = "contrib"
@@ -64,4 +82,13 @@ projects[views_pdf][subdir] = "contrib"
 projects[responsive_bartik][type] = "theme"
 projects[responsive_bartik][version] = "1.0-rc1"
 projects[responsive_bartik][subdir] = "contrib"
+
+; +++++ Libraries +++++
+
+; CKEditor
+libraries[ckeditor][directory_name] = "ckeditor"
+libraries[ckeditor][type] = "library"
+libraries[ckeditor][destination] = "libraries"
+libraries[ckeditor][download][type] = "get"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6.1/ckeditor_3.6.6.1.tar.gz"
 

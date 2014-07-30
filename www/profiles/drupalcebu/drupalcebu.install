@@ -274,16 +274,23 @@ function drupalcebu_install() {
   // revert features to ensure they are all installed
   $features = array(
     'drupalcebu_feed_user_import',
-    'drupalcebu_tags_vocabulary',
     'drupalcebu_blog',
     'drupalcebu_blog_view',
     'drupalcebu_certificate_pdf_view',
+    'drupalcebu_logo_contents_content_type',
+    'drupalcebu_inline_registration_settings',
+    'drupalcebu_logo_contest_context',
     'drupalcebu_mail_chimp',
     'drupalcebu_main_menu',
     'drupalcebu_meetup_api',
     'drupalcebu_resource',
     'drupalcebu_resources_view',
-    'drupalcebu_user_profile'
+    'drupalcebu_sitewide_block_settings',
+    'drupalcebu_sitewide_context',
+    'drupalcebu_sitewide_permissions',
+    'drupalcebu_text_format_settings',
+    'drupalcebu_user_profile',
+    //'drupalcebu_users_logo_view'
   );
   features_revert($features);
   // ignore any rebuild messages

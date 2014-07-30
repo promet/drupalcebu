@@ -30,23 +30,6 @@ function drupalcebu_main_menu_menu_default_menu_links() {
     'weight' => 1,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_home:<front>
-  $menu_links['main-menu_home:<front>'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Home',
-    'options' => array(
-      'identifier' => 'main-menu_home:<front>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 0,
-  );
   // Exported menu link: main-menu_resources:resources
   $menu_links['main-menu_resources:resources'] = array(
     'menu_name' => 'main-menu',
@@ -70,7 +53,6 @@ function drupalcebu_main_menu_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Blog');
-  t('Home');
   t('Resources');
 
 

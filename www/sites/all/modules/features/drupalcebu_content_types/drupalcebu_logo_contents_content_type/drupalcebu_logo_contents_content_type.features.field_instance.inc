@@ -15,7 +15,7 @@ function drupalcebu_logo_contents_content_type_field_default_field_instances() {
     'bundle' => 'logo_contest',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Tell us something about your design.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -36,7 +36,7 @@ function drupalcebu_logo_contents_content_type_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Body',
+    'label' => 'Description',
     'required' => 0,
     'settings' => array(
       'display_summary' => 0,
@@ -47,7 +47,7 @@ function drupalcebu_logo_contents_content_type_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 20,
+        'rows' => 5,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
@@ -81,7 +81,7 @@ function drupalcebu_logo_contents_content_type_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_logo',
     'label' => 'Logo',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -105,10 +105,55 @@ function drupalcebu_logo_contents_content_type_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-logo_contest-field_logo_agreement'
+  $field_instances['node-logo_contest-field_logo_agreement'] = array(
+    'bundle' => 'logo_contest',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_logo_agreement',
+    'label' => 'I accept that submitting this logo will create an account in DrupalCebu.org',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => -2,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
-  t('Body');
+  t('Description');
+  t('I accept that submitting this logo will create an account in DrupalCebu.org');
   t('Logo');
+  t('Tell us something about your design.');
 
   return $field_instances;
 }

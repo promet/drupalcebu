@@ -1,0 +1,9 @@
+name = DrupalCebu Logo Contest Context
+core = 7.x
+package = Drupal Cebu Contexts
+dependencies[] = context
+dependencies[] = drupalcebu_logo_contents_content_type
+dependencies[] = formblock
+features[context][] = logo_contest_form
+features[ctools][] = context:context:3
+features[features_api][] = api:2
