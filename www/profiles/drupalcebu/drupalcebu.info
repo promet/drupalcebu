@@ -1,0 +1,115 @@
+; Packaging information for drupalcebu
+name = "Drupal Cebu"
+description = ""
+core = "7.x"
+; ----------
+; Dependencies
+; ----------
+; Administration
+dependencies[] = admin_menu
+; Chaos tool suite
+dependencies[] = ctools
+; Context
+dependencies[] = context
+dependencies[] = context_ui
+; Core
+dependencies[] = block
+dependencies[] = color
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = node
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = php
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = system
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = update
+dependencies[] = user
+; Development
+dependencies[] = devel
+dependencies[] = meetup_api
+dependencies[] = profiler_builder
+; Feeds
+dependencies[] = feeds
+; Fields
+dependencies[] = link
+; MailChimp
+dependencies[] = mailchimp
+dependencies[] = mailchimp_lists
+; Other
+dependencies[] = entity
+dependencies[] = job_scheduler
+dependencies[] = libraries
+dependencies[] = strongarm
+; User interface
+dependencies[] = jquery_update
+; Views
+dependencies[] = views
+dependencies[] = views_pdf
+; Features
+dependencies[] = features
+dependencies[] = drupalcebu_blog
+dependencies[] = drupalcebu_blog_view
+dependencies[] = drupalcebu_certificate_pdf_view
+dependencies[] = drupalcebu_feed_user_import
+dependencies[] = drupalcebu_mail_chimp
+dependencies[] = drupalcebu_main_menu
+dependencies[] = drupalcebu_meetup_api
+dependencies[] = drupalcebu_resource
+dependencies[] = drupalcebu_resources_view
+dependencies[] = drupalcebu_tags_vocabulary
+dependencies[] = drupalcebu_user_profile
+dependencies[] = features_override
+
+; ----------
+; Variables
+; ----------
+variables[admin_theme] = 'seven'
+variables[context_block_rebuild_needed] = true
+variables[date_default_timezone] = 'Asia/Manila'
+variables[drupalcebu_group_urlname] = 'drupal-ph'
+variables[field_bundle_settings_node__resource][extra_fields][form][title][weight] = '-5'
+variables[field_bundle_settings_user__user][view_modes][full][custom_settings] = false
+variables[field_bundle_settings_user__user][extra_fields][form][account][weight] = '0'
+variables[field_bundle_settings_user__user][extra_fields][form][timezone][weight] = '4'
+variables[field_bundle_settings_user__user][extra_fields][display][summary][default] = array (
+  'weight' => '5',
+  'visible' => false,
+)
+variables[filter_fallback_format] = 'plain_text'
+variables[job_scheduler_rebuild_all] = true
+variables[mailchimp_api_key] = 'd655dfce7c52228ac14aadac6875711b-us8'
+variables[mailchimp_batch_limit] = '100'
+variables[meetup_api_key] = '7ba596b1414726d336571172b4d454'
+variables[menu_options_blog][0] = 'main-menu'
+variables[menu_options_resource][0] = 'main-menu'
+variables[menu_parent_blog] = 'main-menu:0'
+variables[menu_parent_resource] = 'main-menu:0'
+variables[node_admin_theme] = '1'
+variables[node_options_blog][0] = 'status'
+variables[node_options_page][0] = 'status'
+variables[node_options_resource][0] = 'status'
+variables[node_preview_blog] = '1'
+variables[node_preview_resource] = '1'
+variables[node_submitted_resource] = 1
+variables[theme_default] = 'bartik'
+variables[update_last_email_notification] = 1406611738
+variables[user_pictures] = '1'
+variables[user_picture_dimensions] = '1024x1024'
+variables[user_picture_file_size] = '800'
+variables[user_picture_style] = 'thumbnail'
+variables[user_register] = 2
+
