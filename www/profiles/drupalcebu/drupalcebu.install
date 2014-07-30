@@ -290,7 +290,7 @@ function drupalcebu_install() {
     'drupalcebu_sitewide_permissions',
     'drupalcebu_text_format_settings',
     'drupalcebu_user_profile',
-    //'drupalcebu_users_logo_view'
+    'drupalcebu_users_logo_view',
   );
   features_revert($features);
   // ignore any rebuild messages
