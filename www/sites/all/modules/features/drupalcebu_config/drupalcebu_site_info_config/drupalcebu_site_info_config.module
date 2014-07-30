@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCebu Site Info Config feature.
+ */
+
+include_once 'drupalcebu_site_info_config.features.inc';

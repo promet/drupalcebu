@@ -17,6 +17,7 @@ drupalcebu_logo_contents_content_type
 drupalcebu_mail_chimp
 drupalcebu_main_menu
 drupalcebu_meetup_api
+drupalcebu_site_info_config
 drupalcebu_tags_vocabulary
 drupalcebu_user_profile
 entity
