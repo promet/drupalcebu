@@ -94,5 +94,14 @@ function drupalcebu_logo_contents_content_type_strongarm() {
   $strongarm->value = 0;
   $export['node_submitted_logo_contest'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplify_nodes_logo_contest';
+  $strongarm->value = array(
+    0 => 'format',
+  );
+  $export['simplify_nodes_logo_contest'] = $strongarm;
+
   return $export;
 }

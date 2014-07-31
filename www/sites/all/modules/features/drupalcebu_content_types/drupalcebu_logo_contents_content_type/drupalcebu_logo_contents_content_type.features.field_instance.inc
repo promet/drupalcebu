@@ -15,7 +15,7 @@ function drupalcebu_logo_contents_content_type_field_default_field_instances() {
     'bundle' => 'logo_contest',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Tell us something about your design.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -152,7 +152,6 @@ function drupalcebu_logo_contents_content_type_field_default_field_instances() {
   t('Description');
   t('I accept that submitting this logo will create an account in DrupalCebu.org');
   t('Logo');
-  t('Tell us something about your design.');
 
   return $field_instances;
 }
