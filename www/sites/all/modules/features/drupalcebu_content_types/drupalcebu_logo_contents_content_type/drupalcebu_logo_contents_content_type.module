@@ -13,5 +13,6 @@ function drupalcebu_logo_contents_content_type_form_alter(&$form, &$form_state, 
   global $user;
   if ($form_id == 'logo_contest_node_form') {
     $form['field_logo_agreement']['#access'] = !$user->uid ? TRUE : FALSE ;
+    $form['field_logo_agreement'][LANGUAGE_NONE]['#required'] = !$user->uid ? TRUE : FALSE;
   }
 }
