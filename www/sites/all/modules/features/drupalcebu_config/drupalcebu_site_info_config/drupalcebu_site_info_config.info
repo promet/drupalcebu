@@ -1,4 +1,5 @@
 name = DrupalCebu Site Info Config
+description = A feature for Site Information settings.
 core = 7.x
 package = Drupal Cebu Config
 dependencies[] = ctools
@@ -12,3 +13,4 @@ features[variable][] = site_frontpage
 features[variable][] = site_mail
 features[variable][] = site_name
 features[variable][] = site_slogan
+version = 7.x-1.0

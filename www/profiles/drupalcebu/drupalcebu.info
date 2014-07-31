@@ -1,6 +1,6 @@
 ; Packaging information for drupalcebu
 name = "Drupal Cebu"
-description = "DrupalCebu Custom Profile"
+description = "An installation profile for Drupal Cebu site."
 exclusive = "1"
 core = "7.x"
 ; ----------
@@ -39,11 +39,7 @@ dependencies[] = text
 dependencies[] = update
 dependencies[] = user
 ; Development
-dependencies[] = devel
 dependencies[] = meetup_api
-dependencies[] = profiler_builder
-; Google Analytics
-dependencies[] = googleanalytics
 ; Feeds
 dependencies[] = feeds
 ; Fields
@@ -60,9 +56,12 @@ dependencies[] = inline_registration
 dependencies[] = job_scheduler
 dependencies[] = libraries
 dependencies[] = strongarm
+; Statistics
+dependencies[] = googleanalytics
 ; User interface
 dependencies[] = ckeditor
 dependencies[] = jquery_update
+dependencies[] = simplify
 ; Views
 dependencies[] = views
 dependencies[] = views_pdf
@@ -81,43 +80,145 @@ dependencies[] = drupalcebu_main_menu
 dependencies[] = drupalcebu_meetup_api
 dependencies[] = drupalcebu_resource
 dependencies[] = drupalcebu_resources_view
-dependencies[] = drupalcebu_sitewide_block_settings
 dependencies[] = drupalcebu_site_info_config
-dependencies[] = drupalcebu_sitewide_permissions
+dependencies[] = drupalcebu_sitewide_block_settings
 dependencies[] = drupalcebu_sitewide_context
 dependencies[] = drupalcebu_sitewide_permissions
+dependencies[] = drupalcebu_submissions_view
 dependencies[] = drupalcebu_text_format_settings
 dependencies[] = drupalcebu_user_profile
-dependencies[] = drupalcebu_users_logo_view
 dependencies[] = features_override
 
 ; ----------
 ; Variables
 ; ----------
-variables[additional_settings__active_tab_logo_contest] = 'edit-formblock'
+variables[additional_settings__active_tab_logo_contest] = 'edit-simplify'
 variables[admin_theme] = 'seven'
 variables[context_block_rebuild_needed] = true
-variables[date_default_timezone] = 'Asia/Manila'
-variables[drupalcebu_group_urlname] = 'drupal-ph'
-variables[date_default_timezone] = 'Asia/Manila'
+variables[date_default_timezone] = 'UTC'
+variables[field_bundle_settings_node__logo_contest][view_modes][teaser][custom_settings] = true
+variables[field_bundle_settings_node__logo_contest][view_modes][full][custom_settings] = false
+variables[field_bundle_settings_node__logo_contest][view_modes][rss][custom_settings] = false
+variables[field_bundle_settings_node__logo_contest][view_modes][search_index][custom_settings] = false
+variables[field_bundle_settings_node__logo_contest][view_modes][search_result][custom_settings] = false
 variables[field_bundle_settings_node__logo_contest][extra_fields][form][title][weight] = '-5'
 variables[field_bundle_settings_node__resource][extra_fields][form][title][weight] = '-5'
-variables[field_bundle_settings_user__user][view_modes][full][custom_settings] = false
-variables[field_bundle_settings_user__user][extra_fields][form][account][weight] = '0'
-variables[field_bundle_settings_user__user][extra_fields][form][timezone][weight] = '4'
-variables[field_bundle_settings_user__user][extra_fields][display][summary][default] = array (
-  'weight' => '5',
-  'visible' => false,
-)
 variables[filter_fallback_format] = 'plain_text'
 variables[formblock_expose_logo_contest] = 1
 variables[formblock_show_help_logo_contest] = 1
+variables[googleanalytics_account] = 'UA-53348063-1'
+variables[googleanalytics_custom] = '0'
+variables[googleanalytics_custom_dimension][indexes][1][index] = 1
+variables[googleanalytics_custom_dimension][indexes][1][value] = ''
+variables[googleanalytics_custom_dimension][indexes][2][index] = 2
+variables[googleanalytics_custom_dimension][indexes][2][value] = ''
+variables[googleanalytics_custom_dimension][indexes][3][index] = 3
+variables[googleanalytics_custom_dimension][indexes][3][value] = ''
+variables[googleanalytics_custom_dimension][indexes][4][index] = 4
+variables[googleanalytics_custom_dimension][indexes][4][value] = ''
+variables[googleanalytics_custom_dimension][indexes][5][index] = 5
+variables[googleanalytics_custom_dimension][indexes][5][value] = ''
+variables[googleanalytics_custom_dimension][indexes][6][index] = 6
+variables[googleanalytics_custom_dimension][indexes][6][value] = ''
+variables[googleanalytics_custom_dimension][indexes][7][index] = 7
+variables[googleanalytics_custom_dimension][indexes][7][value] = ''
+variables[googleanalytics_custom_dimension][indexes][8][index] = 8
+variables[googleanalytics_custom_dimension][indexes][8][value] = ''
+variables[googleanalytics_custom_dimension][indexes][9][index] = 9
+variables[googleanalytics_custom_dimension][indexes][9][value] = ''
+variables[googleanalytics_custom_dimension][indexes][10][index] = 10
+variables[googleanalytics_custom_dimension][indexes][10][value] = ''
+variables[googleanalytics_custom_dimension][indexes][11][index] = 11
+variables[googleanalytics_custom_dimension][indexes][11][value] = ''
+variables[googleanalytics_custom_dimension][indexes][12][index] = 12
+variables[googleanalytics_custom_dimension][indexes][12][value] = ''
+variables[googleanalytics_custom_dimension][indexes][13][index] = 13
+variables[googleanalytics_custom_dimension][indexes][13][value] = ''
+variables[googleanalytics_custom_dimension][indexes][14][index] = 14
+variables[googleanalytics_custom_dimension][indexes][14][value] = ''
+variables[googleanalytics_custom_dimension][indexes][15][index] = 15
+variables[googleanalytics_custom_dimension][indexes][15][value] = ''
+variables[googleanalytics_custom_dimension][indexes][16][index] = 16
+variables[googleanalytics_custom_dimension][indexes][16][value] = ''
+variables[googleanalytics_custom_dimension][indexes][17][index] = 17
+variables[googleanalytics_custom_dimension][indexes][17][value] = ''
+variables[googleanalytics_custom_dimension][indexes][18][index] = 18
+variables[googleanalytics_custom_dimension][indexes][18][value] = ''
+variables[googleanalytics_custom_dimension][indexes][19][index] = 19
+variables[googleanalytics_custom_dimension][indexes][19][value] = ''
+variables[googleanalytics_custom_dimension][indexes][20][index] = 20
+variables[googleanalytics_custom_dimension][indexes][20][value] = ''
+variables[googleanalytics_custom_metric][indexes][1][index] = 1
+variables[googleanalytics_custom_metric][indexes][1][value] = ''
+variables[googleanalytics_custom_metric][indexes][2][index] = 2
+variables[googleanalytics_custom_metric][indexes][2][value] = ''
+variables[googleanalytics_custom_metric][indexes][3][index] = 3
+variables[googleanalytics_custom_metric][indexes][3][value] = ''
+variables[googleanalytics_custom_metric][indexes][4][index] = 4
+variables[googleanalytics_custom_metric][indexes][4][value] = ''
+variables[googleanalytics_custom_metric][indexes][5][index] = 5
+variables[googleanalytics_custom_metric][indexes][5][value] = ''
+variables[googleanalytics_custom_metric][indexes][6][index] = 6
+variables[googleanalytics_custom_metric][indexes][6][value] = ''
+variables[googleanalytics_custom_metric][indexes][7][index] = 7
+variables[googleanalytics_custom_metric][indexes][7][value] = ''
+variables[googleanalytics_custom_metric][indexes][8][index] = 8
+variables[googleanalytics_custom_metric][indexes][8][value] = ''
+variables[googleanalytics_custom_metric][indexes][9][index] = 9
+variables[googleanalytics_custom_metric][indexes][9][value] = ''
+variables[googleanalytics_custom_metric][indexes][10][index] = 10
+variables[googleanalytics_custom_metric][indexes][10][value] = ''
+variables[googleanalytics_custom_metric][indexes][11][index] = 11
+variables[googleanalytics_custom_metric][indexes][11][value] = ''
+variables[googleanalytics_custom_metric][indexes][12][index] = 12
+variables[googleanalytics_custom_metric][indexes][12][value] = ''
+variables[googleanalytics_custom_metric][indexes][13][index] = 13
+variables[googleanalytics_custom_metric][indexes][13][value] = ''
+variables[googleanalytics_custom_metric][indexes][14][index] = 14
+variables[googleanalytics_custom_metric][indexes][14][value] = ''
+variables[googleanalytics_custom_metric][indexes][15][index] = 15
+variables[googleanalytics_custom_metric][indexes][15][value] = ''
+variables[googleanalytics_custom_metric][indexes][16][index] = 16
+variables[googleanalytics_custom_metric][indexes][16][value] = ''
+variables[googleanalytics_custom_metric][indexes][17][index] = 17
+variables[googleanalytics_custom_metric][indexes][17][value] = ''
+variables[googleanalytics_custom_metric][indexes][18][index] = 18
+variables[googleanalytics_custom_metric][indexes][18][value] = ''
+variables[googleanalytics_custom_metric][indexes][19][index] = 19
+variables[googleanalytics_custom_metric][indexes][19][value] = ''
+variables[googleanalytics_custom_metric][indexes][20][index] = 20
+variables[googleanalytics_custom_metric][indexes][20][value] = ''
+variables[googleanalytics_domain_mode] = '0'
+variables[googleanalytics_pages] = 'admin
+admin/*
+batch
+node/add*
+node/*/*
+user/*/*'
+variables[googleanalytics_privacy_donottrack] = 1
+variables[googleanalytics_roles][1] = 0
+variables[googleanalytics_roles][2] = 0
+variables[googleanalytics_roles][3] = 0
+variables[googleanalytics_tracker_anonymizeip] = 1
+variables[googleanalytics_trackfiles] = 1
+variables[googleanalytics_trackfiles_extensions] = '7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip'
+variables[googleanalytics_trackmailto] = 1
+variables[googleanalytics_trackmessages][status] = 0
+variables[googleanalytics_trackmessages][warning] = 0
+variables[googleanalytics_trackmessages][error] = 0
+variables[googleanalytics_trackoutbound] = 1
+variables[googleanalytics_visibility_pages] = '0'
+variables[googleanalytics_visibility_roles] = '0'
 variables[inline_registration_logo_contest] = 1
 variables[inline_registration_weight_logo_contest] = '-10'
 variables[job_scheduler_rebuild_all] = true
 variables[mailchimp_api_key] = 'd655dfce7c52228ac14aadac6875711b-us8'
 variables[mailchimp_batch_limit] = '100'
 variables[meetup_api_key] = '7ba596b1414726d336571172b4d454'
+variables[menu_default_active_menus][1] = 'main-menu'
+variables[menu_default_active_menus][2] = 'management'
+variables[menu_default_active_menus][3] = 'navigation'
+variables[menu_default_active_menus][4] = 'user-menu'
 variables[menu_options_blog][0] = 'main-menu'
 variables[menu_options_logo_contest][0] = 'main-menu'
 variables[menu_options_resource][0] = 'main-menu'
@@ -132,11 +233,8 @@ variables[node_preview_blog] = '1'
 variables[node_preview_logo_contest] = '1'
 variables[node_preview_resource] = '1'
 variables[node_submitted_resource] = 1
+variables[simplify_nodes_logo_contest][0] = 'format'
+variables[site_frontpage] = 'node'
 variables[theme_default] = 'bartik'
-variables[update_last_email_notification] = 1406622656
-variables[user_pictures] = '1'
-variables[user_picture_dimensions] = '1024x1024'
-variables[user_picture_file_size] = '800'
-variables[user_picture_style] = 'thumbnail'
-variables[user_register] = 2
+variables[update_last_email_notification] = 1406781897
 

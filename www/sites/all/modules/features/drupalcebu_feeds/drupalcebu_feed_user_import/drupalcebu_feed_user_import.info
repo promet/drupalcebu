@@ -1,4 +1,5 @@
 name = DrupalCebu Feed User Import
+description = A feature for User Import feeds.
 core = 7.x
 package = Drupal Cebu Feeds
 features[ctools][] = feeds:feeds_importer_default:1
@@ -6,3 +7,4 @@ features[features_api][] = api:2
 features[feeds_importer][] = user_import
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][feeds] = feeds
+version = 7.x-1.0

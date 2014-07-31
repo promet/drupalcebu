@@ -1,7 +1,9 @@
 name = DrupalCebu Google Analytics Settings
+description = A feature for Google Analytics settings.
 core = 7.x
 package = Drupal Cebu Config
 dependencies[] = ctools
+dependencies[] = googleanalytics
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
@@ -33,3 +35,4 @@ features[variable][] = googleanalytics_trackurlfragments
 features[variable][] = googleanalytics_trackuserid
 features[variable][] = googleanalytics_visibility_pages
 features[variable][] = googleanalytics_visibility_roles
+version = 7.x-1.0

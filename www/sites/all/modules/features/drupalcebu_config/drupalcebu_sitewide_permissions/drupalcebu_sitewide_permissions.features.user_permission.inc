@@ -75,15 +75,6 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
     'module' => 'dashboard',
   );
 
-  // Exported permission: 'access devel information'.
-  $permissions['access devel information'] = array(
-    'name' => 'access devel information',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'devel',
-  );
-
   // Exported permission: 'access private fields'.
   $permissions['access private fields'] = array(
     'name' => 'access private fields',
@@ -154,15 +145,6 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: 'administer contexts'.
-  $permissions['administer contexts'] = array(
-    'name' => 'administer contexts',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'context_ui',
   );
 
   // Exported permission: 'administer features'.
@@ -264,15 +246,6 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'administer profiler builder'.
-  $permissions['administer profiler builder'] = array(
-    'name' => 'administer profiler builder',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'profiler_builder',
-  );
-
   // Exported permission: 'administer search'.
   $permissions['administer search'] = array(
     'name' => 'administer search',
@@ -280,6 +253,15 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'search',
+  );
+
+  // Exported permission: 'administer simplify'.
+  $permissions['administer simplify'] = array(
+    'name' => 'administer simplify',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplify',
   );
 
   // Exported permission: 'administer site configuration'.
@@ -388,15 +370,6 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'feeds',
-  );
-
-  // Exported permission: 'context ajax block access'.
-  $permissions['context ajax block access'] = array(
-    'name' => 'context ajax block access',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'context_ui',
   );
 
   // Exported permission: 'create blog content'.
@@ -624,15 +597,6 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'execute php code'.
-  $permissions['execute php code'] = array(
-    'name' => 'execute php code',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'devel',
-  );
-
   // Exported permission: 'flush caches'.
   $permissions['flush caches'] = array(
     'name' => 'flush caches',
@@ -696,15 +660,6 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'switch users'.
-  $permissions['switch users'] = array(
-    'name' => 'switch users',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'devel',
-  );
-
   // Exported permission: 'unlock user_import feeds'.
   $permissions['unlock user_import feeds'] = array(
     'name' => 'unlock user_import feeds',
@@ -746,6 +701,7 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
     'name' => 'use text format filtered_html',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
   );
@@ -766,6 +722,15 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: 'view hidden fields'.
+  $permissions['view hidden fields'] = array(
+    'name' => 'view hidden fields',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplify',
   );
 
   // Exported permission: 'view own unpublished content'.
