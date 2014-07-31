@@ -13,9 +13,6 @@ projects[ctools][subdir] = "contrib"
 projects[context][version] = "3.2"
 projects[context][subdir] = "contrib"
 
-projects[devel][version] = "1.5"
-projects[devel][subdir] = "contrib"
-
 projects[meetup_api][version] = "1.0-beta2"
 projects[meetup_api][subdir] = "contrib"
 
