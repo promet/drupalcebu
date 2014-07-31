@@ -16,11 +16,65 @@ projects[context][subdir] = "contrib"
 projects[meetup_api][version] = "1.0-beta2"
 projects[meetup_api][subdir] = "contrib"
 
-projects[profiler_builder][version] = "1.1"
-projects[profiler_builder][subdir] = "contrib"
+projects[drupalcebu_google_analytics_settings][version] = "1.0"
+projects[drupalcebu_google_analytics_settings][subdir] = "contrib"
 
-projects[entityform][version] = "2.0-beta4"
-projects[entityform][subdir] = "contrib"
+projects[drupalcebu_inline_registration_settings][version] = "1.0"
+projects[drupalcebu_inline_registration_settings][subdir] = "contrib"
+
+projects[drupalcebu_mail_chimp][version] = "1.0"
+projects[drupalcebu_mail_chimp][subdir] = "contrib"
+
+projects[drupalcebu_meetup_api][version] = "1.0"
+projects[drupalcebu_meetup_api][subdir] = "contrib"
+
+projects[drupalcebu_site_info_config][version] = "1.0"
+projects[drupalcebu_site_info_config][subdir] = "contrib"
+
+projects[drupalcebu_sitewide_block_settings][version] = "1.0"
+projects[drupalcebu_sitewide_block_settings][subdir] = "contrib"
+
+projects[drupalcebu_sitewide_permissions][version] = "1.0"
+projects[drupalcebu_sitewide_permissions][subdir] = "contrib"
+
+projects[drupalcebu_text_format_settings][version] = "1.0"
+projects[drupalcebu_text_format_settings][subdir] = "contrib"
+
+projects[drupalcebu_user_profile][version] = "1.0"
+projects[drupalcebu_user_profile][subdir] = "contrib"
+
+projects[drupalcebu_blog][version] = "1.0"
+projects[drupalcebu_blog][subdir] = "contrib"
+
+projects[drupalcebu_logo_contents_content_type][version] = "1.0"
+projects[drupalcebu_logo_contents_content_type][subdir] = "contrib"
+
+projects[drupalcebu_resource][version] = "1.0"
+projects[drupalcebu_resource][subdir] = "contrib"
+
+projects[drupalcebu_logo_contest_context][version] = "1.0"
+projects[drupalcebu_logo_contest_context][subdir] = "contrib"
+
+projects[drupalcebu_sitewide_context][version] = "1.0"
+projects[drupalcebu_sitewide_context][subdir] = "contrib"
+
+projects[drupalcebu_feed_user_import][version] = "1.0"
+projects[drupalcebu_feed_user_import][subdir] = "contrib"
+
+projects[drupalcebu_main_menu][version] = "1.0"
+projects[drupalcebu_main_menu][subdir] = "contrib"
+
+projects[drupalcebu_blog_view][version] = "1.0"
+projects[drupalcebu_blog_view][subdir] = "contrib"
+
+projects[drupalcebu_certificate_pdf_view][version] = "1.0"
+projects[drupalcebu_certificate_pdf_view][subdir] = "contrib"
+
+projects[drupalcebu_resources_view][version] = "1.0"
+projects[drupalcebu_resources_view][subdir] = "contrib"
+
+projects[drupalcebu_submissions_view][version] = "1.0"
+projects[drupalcebu_submissions_view][subdir] = "contrib"
 
 projects[features][version] = "2.0"
 projects[features][subdir] = "contrib"
@@ -58,17 +112,20 @@ projects[job_scheduler][subdir] = "contrib"
 projects[libraries][version] = "2.2"
 projects[libraries][subdir] = "contrib"
 
-projects[simplify][version] = "3.1"
-projects[simplify][subdir] = "contrib"
-
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
+
+projects[google_analytics][version] = "2.0"
+projects[google_analytics][subdir] = "contrib"
 
 projects[ckeditor][version] = "1.15"
 projects[ckeditor][subdir] = "contrib"
 
 projects[jquery_update][version] = "2.4"
 projects[jquery_update][subdir] = "contrib"
+
+projects[simplify][version] = "3.1"
+projects[simplify][subdir] = "contrib"
 
 projects[views][version] = "3.8"
 projects[views][subdir] = "contrib"
