@@ -2,6 +2,7 @@ name = DrupalCebu Google Analytics Settings
 core = 7.x
 package = Drupal Cebu Config
 dependencies[] = ctools
+dependencies[] = googleanalytics
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
