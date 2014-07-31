@@ -1,5 +1,5 @@
-name = DrupalCebu Logo Contents Content Type
-description = Node type for Logo Contest
+name = DrupalCebu Logo Contents
+description = A feature for Logo Contests content type.
 core = 7.x
 package = Drupal Cebu Content Types
 dependencies[] = ctools
@@ -37,3 +37,4 @@ features[variable][] = node_options_logo_contest
 features[variable][] = node_preview_logo_contest
 features[variable][] = node_submitted_logo_contest
 features[variable][] = simplify_nodes_logo_contest
+version = 7.x-1.0

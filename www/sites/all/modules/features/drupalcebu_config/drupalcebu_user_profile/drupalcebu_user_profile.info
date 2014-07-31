@@ -1,4 +1,5 @@
 name = DrupalCebu User Profile
+description = A feature for User Profile settings.
 core = 7.x
 package = Drupal Cebu Config
 dependencies[] = features
@@ -15,3 +16,4 @@ features[field_instance][] = user-user-field_user_first_name
 features[field_instance][] = user-user-field_user_last_name
 features[field_instance][] = user-user-field_user_mailchimp
 features[field_instance][] = user-user-field_user_suffix
+version = 7.x-1.0

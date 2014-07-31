@@ -1,5 +1,5 @@
 name = DrupalCebu Blog
-description = Blog content type.
+description = A feature for Blog content type.
 core = 7.x
 package = Drupal Cebu Content Types
 dependencies[] = features
@@ -18,3 +18,4 @@ features[variable][] = menu_parent_blog
 features[variable][] = node_options_blog
 features[variable][] = node_preview_blog
 features[variable][] = node_submitted_blog
+version = 7.x-1.0

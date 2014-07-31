@@ -1,4 +1,5 @@
 name = DrupalCebu Logo Contest Context
+description = A feature for Logo Contest context.
 core = 7.x
 package = Drupal Cebu Contexts
 dependencies[] = context
@@ -7,3 +8,4 @@ dependencies[] = formblock
 features[context][] = logo_contest_form
 features[ctools][] = context:context:3
 features[features_api][] = api:2
+version = 7.x-1.0

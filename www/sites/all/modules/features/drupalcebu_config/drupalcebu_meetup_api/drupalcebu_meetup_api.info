@@ -1,5 +1,5 @@
 name = Drupal Cebu Meetup API
-description = Configuration for meetup api.
+description = A feature for Meetup API settings.
 core = 7.x
 package = Drupal Cebu Config
 dependencies[] = context
@@ -12,3 +12,4 @@ features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[variable][] = meetup_api_key
 features[variable][] = meetup_api_key_nowarn
+version = 7.x-1.0

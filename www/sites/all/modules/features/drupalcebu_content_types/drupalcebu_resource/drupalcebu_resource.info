@@ -1,5 +1,5 @@
 name = DrupalCebu Resource
-description = Resource content type
+description = A feature for Resource content type.
 core = 7.x
 package = Drupal Cebu Content Types
 dependencies[] = ctools
@@ -23,3 +23,4 @@ features[variable][] = menu_parent_resource
 features[variable][] = node_options_resource
 features[variable][] = node_preview_resource
 features[variable][] = node_submitted_resource
+version = 7.x-1.0

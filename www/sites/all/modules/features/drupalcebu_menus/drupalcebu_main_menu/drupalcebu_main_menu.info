@@ -1,5 +1,5 @@
 name = DrupalCebu Main Menu
-description = Menu and menu items for Main navigation.
+description = A feature for the Menu and Menu Items of the Main navigation.
 core = 7.x
 package = Drupal Cebu Menus
 dependencies[] = features
@@ -8,3 +8,4 @@ features[features_api][] = api:2
 features[menu_custom][] = main-menu
 features[menu_links][] = main-menu_blog:blog
 features[menu_links][] = main-menu_resources:resources
+version = 7.x-1.0
