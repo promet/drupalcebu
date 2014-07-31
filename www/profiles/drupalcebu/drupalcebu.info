@@ -39,7 +39,6 @@ dependencies[] = text
 dependencies[] = update
 dependencies[] = user
 ; Development
-dependencies[] = devel
 dependencies[] = meetup_api
 dependencies[] = profiler_builder
 ; Google Analytics
