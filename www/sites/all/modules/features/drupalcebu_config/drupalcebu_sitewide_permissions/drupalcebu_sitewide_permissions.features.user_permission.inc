@@ -255,15 +255,6 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'administer profiler builder'.
-  $permissions['administer profiler builder'] = array(
-    'name' => 'administer profiler builder',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'profiler_builder',
-  );
-
   // Exported permission: 'administer search'.
   $permissions['administer search'] = array(
     'name' => 'administer search',
@@ -271,6 +262,15 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'search',
+  );
+
+  // Exported permission: 'administer simplify'.
+  $permissions['administer simplify'] = array(
+    'name' => 'administer simplify',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplify',
   );
 
   // Exported permission: 'administer site configuration'.
@@ -740,6 +740,15 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: 'view hidden fields'.
+  $permissions['view hidden fields'] = array(
+    'name' => 'view hidden fields',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplify',
   );
 
   // Exported permission: 'view own unpublished content'.
