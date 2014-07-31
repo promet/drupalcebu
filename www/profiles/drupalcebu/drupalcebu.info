@@ -87,9 +87,9 @@ dependencies[] = drupalcebu_site_info_config
 dependencies[] = drupalcebu_sitewide_permissions
 dependencies[] = drupalcebu_sitewide_context
 dependencies[] = drupalcebu_sitewide_permissions
+dependencies[] = drupalcebu_submissions_view
 dependencies[] = drupalcebu_text_format_settings
 dependencies[] = drupalcebu_user_profile
-dependencies[] = drupalcebu_users_logo_view
 dependencies[] = features_override
 
 ; ----------

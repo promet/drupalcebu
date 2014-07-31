@@ -1,8 +1,8 @@
-name = DrupalCebu Users Logo View
+name = DrupalCebu Submissions View
 core = 7.x
 package = Drupal Cebu Views
 dependencies[] = views
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
-features[views_view][] = users_logo
+features[views_view][] = user_submissions
 features_exclude[dependencies][ctools] = ctools
