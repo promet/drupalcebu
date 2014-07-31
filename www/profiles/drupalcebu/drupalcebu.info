@@ -59,6 +59,7 @@ dependencies[] = formblock
 dependencies[] = inline_registration
 dependencies[] = job_scheduler
 dependencies[] = libraries
+dependencies[] = simplify
 dependencies[] = strongarm
 ; User interface
 dependencies[] = ckeditor

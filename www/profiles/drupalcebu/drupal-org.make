@@ -61,6 +61,9 @@ projects[job_scheduler][subdir] = "contrib"
 projects[libraries][version] = "2.2"
 projects[libraries][subdir] = "contrib"
 
+projects[simplify][version] = "3.1"
+projects[simplify][subdir] = "contrib"
+
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
 
