@@ -16,6 +16,9 @@ projects[context][subdir] = "contrib"
 projects[meetup_api][version] = "1.0-beta2"
 projects[meetup_api][subdir] = "contrib"
 
+projects[profiler_builder][version] = "1.1"
+projects[profiler_builder][subdir] = "contrib"
+
 projects[drupalcebu_google_analytics_settings][version] = "1.0"
 projects[drupalcebu_google_analytics_settings][subdir] = "contrib"
 
@@ -27,6 +30,9 @@ projects[drupalcebu_mail_chimp][subdir] = "contrib"
 
 projects[drupalcebu_meetup_api][version] = "1.0"
 projects[drupalcebu_meetup_api][subdir] = "contrib"
+
+projects[drupalcebu_recaptcha_settings][version] = "1.0"
+projects[drupalcebu_recaptcha_settings][subdir] = "contrib"
 
 projects[drupalcebu_site_info_config][version] = "1.0"
 projects[drupalcebu_site_info_config][subdir] = "contrib"
@@ -114,6 +120,12 @@ projects[libraries][subdir] = "contrib"
 
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
+
+projects[captcha][version] = "1.1"
+projects[captcha][subdir] = "contrib"
+
+projects[recaptcha][version] = "1.11"
+projects[recaptcha][subdir] = "contrib"
 
 projects[google_analytics][version] = "2.0"
 projects[google_analytics][subdir] = "contrib"

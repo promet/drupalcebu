@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Install function for the reCAPTCHA Settings module.
+ */
+
+
+/**
+ * Implementation of hook_install().
+ */
+function drupalcebu_recaptcha_settings_install() {
+  // Insert default CAPTCHA points for logo_contest_node_form.
+  $form_ids = array(
+    'logo_contest_node_form'
+  );
+
+  foreach ($form_ids as $form_id) {
+    db_insert('captcha_points')
+      ->fields(array(
+        'form_id' => $form_id,
+        'module' => 'recaptcha',
+        'captcha_type' => 'reCAPTCHA',
+      ))
+      ->execute();
+  }
+}

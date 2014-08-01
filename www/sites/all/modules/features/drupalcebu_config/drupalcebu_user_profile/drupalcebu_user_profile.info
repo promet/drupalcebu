@@ -2,6 +2,7 @@ name = DrupalCebu User Profile
 description = A feature for User Profile settings.
 core = 7.x
 package = Drupal Cebu Config
+project = drupalcebu_user_profile
 dependencies[] = features
 dependencies[] = mailchimp_lists
 dependencies[] = text
