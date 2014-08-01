@@ -56,6 +56,9 @@ dependencies[] = inline_registration
 dependencies[] = job_scheduler
 dependencies[] = libraries
 dependencies[] = strongarm
+; Spam control
+dependencies[] = captcha
+dependencies[] = recaptcha
 ; Statistics
 dependencies[] = googleanalytics
 ; User interface
@@ -78,6 +81,7 @@ dependencies[] = drupalcebu_logo_contest_context
 dependencies[] = drupalcebu_mail_chimp
 dependencies[] = drupalcebu_main_menu
 dependencies[] = drupalcebu_meetup_api
+dependencies[] = drupalcebu_recaptcha_settings
 dependencies[] = drupalcebu_resource
 dependencies[] = drupalcebu_resources_view
 dependencies[] = drupalcebu_site_info_config
@@ -94,6 +98,12 @@ dependencies[] = features_override
 ; ----------
 variables[additional_settings__active_tab_logo_contest] = 'edit-simplify'
 variables[admin_theme] = 'seven'
+variables[anonymous] = 'Anonymous'
+variables[captcha_add_captcha_description] = 1
+variables[captcha_default_challenge] = 'captcha/Math'
+variables[captcha_default_validation] = '1'
+variables[captcha_description] = 'This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
+variables[captcha_persistence] = '1'
 variables[context_block_rebuild_needed] = true
 variables[date_default_timezone] = 'UTC'
 variables[field_bundle_settings_node__logo_contest][view_modes][teaser][custom_settings] = true
@@ -236,5 +246,10 @@ variables[node_submitted_resource] = 1
 variables[simplify_nodes_logo_contest][0] = 'format'
 variables[site_frontpage] = 'node'
 variables[theme_default] = 'bartik'
-variables[update_last_email_notification] = 1406781897
-
+variables[update_last_email_notification] = 1406858634
+variables[user_cancel_method] = 'user_cancel_block'
+variables[user_email_verification] = 1
+variables[user_picture_dimensions] = '85x85'
+variables[user_picture_file_size] = '30'
+variables[user_picture_path] = 'pictures'
+variables[user_register] = '2'
