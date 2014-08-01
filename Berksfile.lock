@@ -1,0 +1,87 @@
+{
+  "sources": {
+    "drupal": {
+      "locked_version": "0.1.1",
+      "git": "git@github.com:promet/drupal_cookbook",
+      "ref": "6aaddbb3cf4b6be60c89a505f7b7f1375fc43f0e"
+    },
+    "promet_php": {
+      "locked_version": "0.1.0",
+      "git": "git@github.com:promet/promet_php-cookbook",
+      "ref": "e61a37fad4110fd7c1efdd394b9e325dcc0cc1cf"
+    },
+    "solo-helper": {
+      "locked_version": "0.0.1",
+      "git": "https://github.com/glennpratt/solo-helper_cookbook.git",
+      "ref": "183b6e411c930ac8e7c638ad3cb10cae6a8af8fc"
+    },
+    "mysql": {
+      "locked_version": "3.0.12"
+    },
+    "chef-php-extra": {
+      "locked_version": "0.4.0",
+      "git": "git://github.com/inviqa/chef-php-extra.git",
+      "ref": "7a743aa34e9082ae56ba8c64d26ee1d1b147a81a"
+    },
+    "apache2": {
+      "locked_version": "1.8.4"
+    },
+    "ark": {
+      "locked_version": "0.4.0"
+    },
+    "database": {
+      "locked_version": "1.5.2"
+    },
+    "postgresql": {
+      "locked_version": "3.2.0"
+    },
+    "apt": {
+      "locked_version": "2.3.0"
+    },
+    "build-essential": {
+      "locked_version": "1.4.2"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
+    },
+    "aws": {
+      "locked_version": "1.0.0"
+    },
+    "xfs": {
+      "locked_version": "1.1.0"
+    },
+    "git": {
+      "locked_version": "2.7.0"
+    },
+    "dmg": {
+      "locked_version": "2.0.8"
+    },
+    "yum": {
+      "locked_version": "2.4.2"
+    },
+    "windows": {
+      "locked_version": "1.11.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "runit": {
+      "locked_version": "1.4.0"
+    },
+    "hostsfile": {
+      "locked_version": "2.4.2"
+    },
+    "memcached": {
+      "locked_version": "1.6.2"
+    },
+    "php": {
+      "locked_version": "1.2.6"
+    },
+    "xml": {
+      "locked_version": "1.2.0"
+    },
+    "postfix": {
+      "locked_version": "3.0.2"
+    }
+  }
+}

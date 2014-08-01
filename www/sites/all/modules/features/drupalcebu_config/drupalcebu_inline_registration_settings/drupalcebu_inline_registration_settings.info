@@ -1,0 +1,13 @@
+name = DrupalCebu Inline Registration Settings
+description = A feature for Inline Registration settings.
+core = 7.x
+package = Drupal Cebu Config
+dependencies[] = ctools
+dependencies[] = drupalcebu_logo_contents_content_type
+dependencies[] = inline_registration
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = inline_registration_logo_contest
+features[variable][] = inline_registration_weight_logo_contest
+version = 7.x-1.0

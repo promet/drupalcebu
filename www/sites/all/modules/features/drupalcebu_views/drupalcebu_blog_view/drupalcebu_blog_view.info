@@ -1,0 +1,11 @@
+name = DrupalCebu Blog View
+description = A feature for the Blog views.
+core = 7.x
+package = Drupal Cebu Views
+dependencies[] = ctools
+dependencies[] = drupalcebu_blog
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = blog
+version = 7.x-1.0

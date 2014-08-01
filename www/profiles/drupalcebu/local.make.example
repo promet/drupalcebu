@@ -1,0 +1,38 @@
+; drupalcebu make file for local development
+core = "7.x"
+api = "2"
+
+projects[drupal][version] = "7.x"
+; include the d.o. profile base
+includes[] = "drupal-org.make"
+
+; +++++ Libraries +++++
+
+; fpdi
+libraries[fpdi][directory_name] = "fpdi"
+libraries[fpdi][type] = "library"
+libraries[fpdi][destination] = "libraries"
+libraries[fpdi][download][type] = "get"
+libraries[fpdi][download][url] = "" ; TODO add download URI
+
+; mailchimp
+libraries[mailchimp][directory_name] = "mailchimp"
+libraries[mailchimp][type] = "library"
+libraries[mailchimp][destination] = "libraries"
+libraries[mailchimp][download][type] = "get"
+libraries[mailchimp][download][url] = "" ; TODO add download URI
+
+; meetup_api
+libraries[meetup_api][directory_name] = "meetup_api"
+libraries[meetup_api][type] = "library"
+libraries[meetup_api][destination] = "libraries"
+libraries[meetup_api][download][type] = "get"
+libraries[meetup_api][download][url] = "" ; TODO add download URI
+
+; tcpdf
+libraries[tcpdf][directory_name] = "tcpdf"
+libraries[tcpdf][type] = "library"
+libraries[tcpdf][destination] = "libraries"
+libraries[tcpdf][download][type] = "get"
+libraries[tcpdf][download][url] = "" ; TODO add download URI
+

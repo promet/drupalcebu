@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCebu Logo Contest Context feature.
+ */
+
+include_once 'drupalcebu_logo_contest_context.features.inc';

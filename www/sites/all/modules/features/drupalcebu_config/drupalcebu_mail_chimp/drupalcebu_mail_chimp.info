@@ -1,0 +1,14 @@
+name = DrupalCebu Mail Chimp
+description = A feature for Mail Chimp settings.
+core = 7.x
+package = Drupal Cebu Config
+dependencies[] = ctools
+dependencies[] = mailchimp
+dependencies[] = mailchimp_lists
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = mailchimp_api_key
+features[variable][] = mailchimp_batch_limit
+features[variable][] = mailchimp_cron
+version = 7.x-1.0

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCebu Submissions View feature.
+ */
+
+include_once 'drupalcebu_submissions_view.features.inc';
