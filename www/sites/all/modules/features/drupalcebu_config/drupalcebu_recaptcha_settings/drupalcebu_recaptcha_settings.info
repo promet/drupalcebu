@@ -5,6 +5,7 @@ package = Drupal Cebu Config
 project = drupalcebu_recaptcha_settings
 dependencies[] = captcha
 dependencies[] = ctools
+dependencies[] = drupalcebu_logo_contents_content_type
 dependencies[] = recaptcha
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
