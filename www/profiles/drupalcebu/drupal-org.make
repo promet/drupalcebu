@@ -13,6 +13,9 @@ projects[ctools][subdir] = "contrib"
 projects[context][version] = "3.2"
 projects[context][subdir] = "contrib"
 
+projects[date][version] = "2.8"
+projects[date][subdir] = "contrib
+
 projects[meetup_api][version] = "1.0-beta2"
 projects[meetup_api][subdir] = "contrib"
 
@@ -64,17 +67,23 @@ projects[drupalcebu_logo_contest_context][subdir] = "contrib"
 projects[drupalcebu_sitewide_context][version] = "1.0"
 projects[drupalcebu_sitewide_context][subdir] = "contrib"
 
+projects[drupalcebu_simple_date_type][version] = "1.0"
+projects[drupalcebu_simple_date_type][subdir] = "contrib"
+
 projects[drupalcebu_feed_user_import][version] = "1.0"
 projects[drupalcebu_feed_user_import][subdir] = "contrib"
 
 projects[drupalcebu_main_menu][version] = "1.0"
 projects[drupalcebu_main_menu][subdir] = "contrib"
 
+projects[drupalcebu_events_taxonomy][version] = "1.0"
+projects[drupalcebu_events_taxonomy][subdir] = "contrib"
+
 projects[drupalcebu_blog_view][version] = "1.0"
 projects[drupalcebu_blog_view][subdir] = "contrib"
 
-projects[drupalcebu_certificate_pdf_view][version] = "1.0"
-projects[drupalcebu_certificate_pdf_view][subdir] = "contrib"
+projects[drupalcebu_certificates_view][version] = "1.0"
+projects[drupalcebu_certificates_view][subdir] = "contrib"
 
 projects[drupalcebu_resources_view][version] = "1.0"
 projects[drupalcebu_resources_view][subdir] = "contrib"
@@ -82,14 +91,23 @@ projects[drupalcebu_resources_view][subdir] = "contrib"
 projects[drupalcebu_submissions_view][version] = "1.0"
 projects[drupalcebu_submissions_view][subdir] = "contrib"
 
-projects[features][version] = "2.0"
+projects[features][version] = "2.1"
 projects[features][subdir] = "contrib"
 
-projects[features_override][version] = "2.0-rc1"
+projects[features_override][version] = "2.0-rc2"
 projects[features_override][subdir] = "contrib"
 
 projects[feeds][version] = "2.0-alpha8"
 projects[feeds][subdir] = "contrib"
+
+projects[addressfield][version] = "1.0-beta5"
+projects[addressfield][subdir] = "contrib"
+
+projects[field_group][version] = "1.4"
+projects[field_group][subdir] = "contrib"
+
+projects[field_group_inline][version] = "1.0-beta5"
+projects[field_group_inline][subdir] = "contrib"
 
 projects[field_permissions][version] = "1.0-beta2"
 projects[field_permissions][subdir] = "contrib"
