@@ -1,0 +1,15 @@
+div {
+  clear: none !important;
+  display: inline !important;
+}
+
+.certificate-body {}
+
+.certificate-body .side-cetificate-event {
+  color: #fff;
+  text-transform: uppercase;
+  float: left;
+  width: 350px;
+  border: 1px solid #000;
+  text-align: left;
+}
