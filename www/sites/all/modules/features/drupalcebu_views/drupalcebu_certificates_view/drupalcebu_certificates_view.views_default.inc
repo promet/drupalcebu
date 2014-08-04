@@ -209,34 +209,42 @@ function drupalcebu_certificates_view_views_default_views() {
   $handler->display->display_options['fields']['field_user_last_name']['label'] = '';
   $handler->display->display_options['fields']['field_user_last_name']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_user_last_name']['alter']['text'] = '<div class="certificate-body">
-<div class="side-cetificate-event">[name]</div>
-<div class="cetificate-message">
-This is to certify that
-<div class="cetificate-name">[field_user_first_name] [field_user_last_name] [field_user_suffix]</div>
-has attended and participated in
-<div class="cetificate-event">[name]</div>
-<div class="cetificate-signatures">[field_event_assignatories]</div>
-</div>
-<div class="cetificate-venue">
-<div class="date">
-Date: [field_event_date]
-</div>
-<div class="location">
-Location: [field_event_venue]
-</div>
-</div>
-<div class="cetificate-sponsors">
-<div class="title">Sponsors</div>
-<div class="logo">
-[field_event_sponsor_logo]
-</div>
-</div>
-<div class="cetificate-partners">
-<div class="title">In Partnership With</div>
-<div class="logo">
-[field_event_partner_logo]
-</div>
-</div></div>';
+  <table>
+    <tr>
+      <td>
+        <div class="side-cetificate-event">[name]</div>
+      </td>
+      <td>
+        <div class="cetificate-message">
+          This is to certify that
+          <div class="cetificate-name">[field_user_first_name] [field_user_last_name] [field_user_suffix]</div>
+          has attended and participated in
+          <div class="cetificate-event">[name]</div>
+          <div class="cetificate-signatures">[field_event_assignatories]</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td>
+        <div class="cetificate-venue">Date: [field_event_date]<br />Location: [field_event_venue]</div>
+      </td>
+      <td>
+        <div class="cetificate-sponsors">
+        <div class="title">Sponsors</div>
+        <div class="logo">[field_event_sponsor_logo]</div>
+        </div>
+      </td>
+      <td>
+        <div class="cetificate-partners">
+        <div class="title">In Partnership With</div>
+        <div class="logo">[field_event_partner_logo]</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>';
   $handler->display->display_options['fields']['field_user_last_name']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: User: Uid */
