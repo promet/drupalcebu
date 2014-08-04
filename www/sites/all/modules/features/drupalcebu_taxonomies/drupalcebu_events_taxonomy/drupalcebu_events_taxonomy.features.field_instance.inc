@@ -63,7 +63,7 @@ function drupalcebu_events_taxonomy_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -107,7 +107,7 @@ function drupalcebu_events_taxonomy_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -154,7 +154,7 @@ function drupalcebu_events_taxonomy_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -198,7 +198,7 @@ function drupalcebu_events_taxonomy_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -242,7 +242,41 @@ function drupalcebu_events_taxonomy_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 5,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-events-field_event_tagline'
+  $field_instances['taxonomy_term-events-field_event_tagline'] = array(
+    'bundle' => 'events',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_event_tagline',
+    'label' => 'Tagline',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
     ),
   );
 
@@ -276,7 +310,7 @@ function drupalcebu_events_taxonomy_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -288,6 +322,7 @@ function drupalcebu_events_taxonomy_field_default_field_instances() {
   t('If there are many combine in one image. Please upload a transparent image.');
   t('Partner Logo');
   t('Sponsor Logo');
+  t('Tagline');
   t('Venue');
 
   return $field_instances;
