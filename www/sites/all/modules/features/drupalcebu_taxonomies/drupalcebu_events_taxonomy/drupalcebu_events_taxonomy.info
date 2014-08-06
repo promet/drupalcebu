@@ -6,6 +6,7 @@ version = 7.x-1.0
 project = drupalcebu_events_taxonomy
 dependencies[] = addressfield
 dependencies[] = date
+dependencies[] = date_popup
 dependencies[] = drupalcebu_user_profile
 dependencies[] = features
 dependencies[] = image
