@@ -129,6 +129,13 @@ function drupalcebu_certificates_view_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Tagline */
+  $handler->display->display_options['fields']['field_event_tagline']['id'] = 'field_event_tagline';
+  $handler->display->display_options['fields']['field_event_tagline']['table'] = 'field_data_field_event_tagline';
+  $handler->display->display_options['fields']['field_event_tagline']['field'] = 'field_event_tagline';
+  $handler->display->display_options['fields']['field_event_tagline']['label'] = '';
+  $handler->display->display_options['fields']['field_event_tagline']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_tagline']['element_label_colon'] = FALSE;
   /* Field: Taxonomy term: Date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
@@ -211,37 +218,62 @@ function drupalcebu_certificates_view_views_default_views() {
   $handler->display->display_options['fields']['field_user_last_name']['alter']['text'] = '<div class="certificate-body">
   <table>
     <tr>
-      <td>
-        <div class="side-cetificate-event">[name]</div>
+      <td class="event-right-column">
+        &nbsp;
       </td>
       <td>
-        <div class="cetificate-message">
-          This is to certify that
-          <div class="cetificate-name">[field_user_first_name] [field_user_last_name] [field_user_suffix]</div>
-          has attended and participated in
-          <div class="cetificate-event">[name]</div>
-          <div class="cetificate-signatures">[field_event_assignatories]</div>
-        </div>
+      &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td class="side-certificate-event">
+        <br /><br /><br /><br />[field_event_tagline]
+      </td>
+      <td class="certificate-name"><br /><br />[field_user_first_name] [field_user_last_name] [field_user_suffix]</td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+      &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td class="certificate-event">
+        <br /><br />[name]
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        [field_event_assignatories]
       </td>
     </tr>
   </table>
-  <table>
+  <table class="certificate-footer">
     <tr>
-      <td>
-        <div class="cetificate-venue">Date: [field_event_date]<br />Location: [field_event_venue]</div>
+      <td class="footer-header">
+        &nbsp;
       </td>
       <td>
-        <div class="cetificate-sponsors">
-        <div class="title">Sponsors</div>
-        <div class="logo">[field_event_sponsor_logo]</div>
-        </div>
+        &nbsp;
       </td>
       <td>
-        <div class="cetificate-partners">
-        <div class="title">In Partnership With</div>
-        <div class="logo">[field_event_partner_logo]</div>
-        </div>
+        &nbsp;
       </td>
+    </tr>
+    <tr>
+      <td class="event-date-venue">
+        <br /><br />Date: [field_event_date]<br />Location: [field_event_venue]
+      </td>
+      <td class="event-sponsors event-logo">[field_event_sponsor_logo]</td>
+      <td class="event-partners event-logo">[field_event_partner_logo]</td>
     </tr>
   </table>
 </div>';
@@ -275,16 +307,18 @@ function drupalcebu_certificates_view_views_default_views() {
   $handler->display->display_options['leading_template'] = '0';
   $handler->display->display_options['template'] = 'certificate_template.pdf';
   $handler->display->display_options['succeed_template'] = '0';
+  $handler->display->display_options['default_font_family'] = 'freesans';
   $handler->display->display_options['default_font_style'] = array(
-    'b' => 'b',
+    'b' => 0,
     'i' => 0,
     'u' => 0,
     'd' => 0,
     'o' => 0,
   );
-  $handler->display->display_options['default_font_size'] = '15';
+  $handler->display->display_options['default_font_size'] = '25';
+  $handler->display->display_options['default_text_align'] = 'C';
   $handler->display->display_options['default_font_color'] = '1B5A8F';
-  $handler->display->display_options['css_file'] = drupal_get_path('module', 'drupalcebu_certificates_view') . '/css/style.css';
+  $handler->display->display_options['css_file'] = 'sites/all/modules/features/drupalcebu_views/drupalcebu_certificates_view/css/style.css';
   $export['certificates'] = $view;
 
   return $export;
