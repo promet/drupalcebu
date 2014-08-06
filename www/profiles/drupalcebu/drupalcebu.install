@@ -273,9 +273,9 @@ function drupalcebu_install() {
   menu_rebuild();
   // revert features to ensure they are all installed
   $features = array(
+    array('drupalcebu_simple_date_type' => array()),
     array('drupalcebu_blog' => array()),
     array('drupalcebu_blog_view' => array()),
-    array('drupalcebu_certificate_pdf_view' => array()),
     array('drupalcebu_feed_user_import' => array()),
     array('drupalcebu_google_analytics_settings' => array()),
     array('drupalcebu_inline_registration_settings' => array()),
@@ -293,7 +293,9 @@ function drupalcebu_install() {
     array('drupalcebu_sitewide_permissions' => array()),
     array('drupalcebu_submissions_view' => array()),
     array('drupalcebu_text_format_settings' => array()),
+    array('drupalcebu_events_taxonomy' => array()),
     array('drupalcebu_user_profile' => array()),
+    array('drupalcebu_certificates_view' => array()),
   );
   features_revert($features);
   // ignore any rebuild messages

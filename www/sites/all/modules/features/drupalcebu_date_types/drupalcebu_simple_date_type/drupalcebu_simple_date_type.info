@@ -1,0 +1,7 @@
+name = DrupalCebu Simple Date Type
+description = A feature for Simple date type and format.
+core = 7.x
+package = Drupal Cebu Date Types
+version = 7.x-1.0
+project = drupalcebu_simple_date_type
+features[features_api][] = api:2

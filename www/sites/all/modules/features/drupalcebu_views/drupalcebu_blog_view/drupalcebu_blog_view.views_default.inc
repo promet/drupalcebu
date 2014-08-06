@@ -53,7 +53,7 @@ function drupalcebu_blog_view_views_default_views() {
   $handler->display->display_options['fields']['field_blog_tags']['table'] = 'field_data_field_blog_tags';
   $handler->display->display_options['fields']['field_blog_tags']['field'] = 'field_blog_tags';
   $handler->display->display_options['fields']['field_blog_tags']['delta_offset'] = '0';
-  /* Field: Content: Body */
+  /* Field: Content: Description */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
