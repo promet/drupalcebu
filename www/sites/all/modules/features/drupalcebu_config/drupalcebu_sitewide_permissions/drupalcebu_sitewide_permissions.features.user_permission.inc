@@ -107,6 +107,7 @@ function drupalcebu_sitewide_permissions_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'user',
   );
