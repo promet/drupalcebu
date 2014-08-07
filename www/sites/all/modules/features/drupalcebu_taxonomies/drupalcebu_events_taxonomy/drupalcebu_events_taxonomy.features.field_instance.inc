@@ -10,63 +10,6 @@
 function drupalcebu_events_taxonomy_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'taxonomy_term-events-field_event_address'
-  $field_instances['taxonomy_term-events-field_event_address'] = array(
-    'bundle' => 'events',
-    'default_value' => array(
-      0 => array(
-        'element_key' => 'taxonomy_term|events|field_event_address|und|0',
-        'thoroughfare' => '',
-        'premise' => '',
-        'postal_code' => '',
-        'locality' => '',
-        'administrative_area' => '',
-        'country' => 'PH',
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'addressfield',
-        'settings' => array(
-          'format_handlers' => array(
-            0 => 'address',
-          ),
-          'use_widget_handlers' => 1,
-        ),
-        'type' => 'addressfield_default',
-        'weight' => 2,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_event_address',
-    'label' => 'Address',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'addressfield',
-      'settings' => array(
-        'available_countries' => array(
-          'PH' => 'PH',
-        ),
-        'format_handlers' => array(
-          'address' => 'address',
-          'address-hide-country' => 'address-hide-country',
-          'organisation' => 0,
-          'name-full' => 0,
-          'name-oneline' => 0,
-        ),
-      ),
-      'type' => 'addressfield_standard',
-      'weight' => 4,
-    ),
-  );
-
   // Exported field_instance: 'taxonomy_term-events-field_event_assignatories'
   $field_instances['taxonomy_term-events-field_event_assignatories'] = array(
     'bundle' => 'events',
@@ -316,7 +259,6 @@ function drupalcebu_events_taxonomy_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Address');
   t('Assignatories');
   t('Date');
   t('If there are many combine in one image. Please upload a transparent image.');

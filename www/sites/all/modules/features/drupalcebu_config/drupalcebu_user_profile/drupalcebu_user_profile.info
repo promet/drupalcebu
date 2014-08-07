@@ -8,6 +8,7 @@ dependencies[] = ctools
 dependencies[] = drupalcebu_events_taxonomy
 dependencies[] = features
 dependencies[] = field_group
+dependencies[] = field_group_inline
 dependencies[] = field_permissions
 dependencies[] = mailchimp_lists
 dependencies[] = options

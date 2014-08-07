@@ -36,3 +36,7 @@
 .certificate-footer .footer-header {
   height: 30px;
 }
+
+.certificate-footer .event-date-venue {
+  color: #2575ba;
+}

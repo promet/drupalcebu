@@ -14,10 +14,13 @@ projects[context][version] = "3.2"
 projects[context][subdir] = "contrib"
 
 projects[date][version] = "2.8"
-projects[date][subdir] = "contrib
+projects[date][subdir] = "contrib"
 
 projects[meetup_api][version] = "1.0-beta2"
 projects[meetup_api][subdir] = "contrib"
+
+projects[drupalcebu_pathauto_settings][version] = "1.0"
+projects[drupalcebu_pathauto_settings][subdir] = "contrib"
 
 projects[profiler_builder][version] = "1.1"
 projects[profiler_builder][subdir] = "contrib"
@@ -100,9 +103,6 @@ projects[features_override][subdir] = "contrib"
 projects[feeds][version] = "2.0-alpha8"
 projects[feeds][subdir] = "contrib"
 
-projects[addressfield][version] = "1.0-beta5"
-projects[addressfield][subdir] = "contrib"
-
 projects[field_group][version] = "1.4"
 projects[field_group][subdir] = "contrib"
 
@@ -136,8 +136,17 @@ projects[job_scheduler][subdir] = "contrib"
 projects[libraries][version] = "2.2"
 projects[libraries][subdir] = "contrib"
 
+projects[pathauto][version] = "1.2"
+projects[pathauto][subdir] = "contrib"
+
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
+
+projects[token][version] = "1.5"
+projects[token][subdir] = "contrib"
+
+projects[globalredirect][version] = "1.5"
+projects[globalredirect][subdir] = "contrib"
 
 projects[captcha][version] = "1.1"
 projects[captcha][subdir] = "contrib"
