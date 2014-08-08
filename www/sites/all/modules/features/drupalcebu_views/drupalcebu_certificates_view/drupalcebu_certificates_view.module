@@ -10,7 +10,14 @@ include_once 'drupalcebu_certificates_view.features.inc';
  * Implements hook_menu_alter().
  */
 function drupalcebu_certificates_view_menu_alter(&$items) {
-  $items['user/%/certificates/%']['access callback'] = 'drupalcebu_certificates_view_certificates_access';
+  $vocabulary = taxonomy_vocabulary_machine_name_load(variable_get('drupalcebu_certificates_view_events', 'events'));
+  $terms = taxonomy_get_tree($vocabulary->vid);
+  foreach ($terms as $term) {
+    if (isset($items['user/%/certificates/' . $term->tid])) {
+      $items['user/%/certificates/' . $term->tid]['access callback'] = 'drupalcebu_certificates_view_certificates_access';
+    }
+  }
+  $items['user/%/certificates']['access callback'] = 'drupalcebu_certificates_view_certificates_list_access';
 }
 
 /**
@@ -24,6 +31,23 @@ function drupalcebu_certificates_view_module_implements_alter(&$implementations,
     unset($implementations['drupalcebu_certificates_view']);
     $implementations['drupalcebu_certificates_view'] = $group;
   }
+}
+
+/**
+ * Access callback: Determine whether a user is able to access list of certificates.
+ */
+function drupalcebu_certificates_view_certificates_list_access() {
+  $uid = arg(1);
+
+  global $user;
+
+  // Only continue if the argument is current user.
+  if ($uid && $uid == $user->uid) {
+    $args = current(func_get_args());
+    return views_access($args);
+  }
+
+  return FALSE;
 }
 
 /**

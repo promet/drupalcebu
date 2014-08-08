@@ -104,7 +104,7 @@ function drupalcebu_certificates_view_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'user/%/cetificates';
+  $handler->display->display_options['path'] = 'user/%/certificates';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Certificates';
   $handler->display->display_options['menu']['description'] = 'List of user\'s available event certificates.';
@@ -112,87 +112,14 @@ function drupalcebu_certificates_view_views_default_views() {
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
 
-  /* Display: PDF Page */
-  $handler = $view->new_display('pdf', 'PDF Page', 'pdf_1');
+  /* Display: Cebu Training Craze² */
+  $handler = $view->new_display('pdf', 'Cebu Training Craze²', 'pdf_1');
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['style_plugin'] = 'pdf_unformatted';
   $handler->display->display_options['row_plugin'] = 'pdf_fields';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  /* Field: Taxonomy term: Tagline */
-  $handler->display->display_options['fields']['field_event_tagline']['id'] = 'field_event_tagline';
-  $handler->display->display_options['fields']['field_event_tagline']['table'] = 'field_data_field_event_tagline';
-  $handler->display->display_options['fields']['field_event_tagline']['field'] = 'field_event_tagline';
-  $handler->display->display_options['fields']['field_event_tagline']['label'] = '';
-  $handler->display->display_options['fields']['field_event_tagline']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_event_tagline']['element_label_colon'] = FALSE;
-  /* Field: Taxonomy term: Date */
-  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['label'] = '';
-  $handler->display->display_options['fields']['field_event_date']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
-    'format_type' => 'simple',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-  );
-  /* Field: Taxonomy term: Assignatories */
-  $handler->display->display_options['fields']['field_event_assignatories']['id'] = 'field_event_assignatories';
-  $handler->display->display_options['fields']['field_event_assignatories']['table'] = 'field_data_field_event_assignatories';
-  $handler->display->display_options['fields']['field_event_assignatories']['field'] = 'field_event_assignatories';
-  $handler->display->display_options['fields']['field_event_assignatories']['label'] = '';
-  $handler->display->display_options['fields']['field_event_assignatories']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_event_assignatories']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_assignatories']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_event_assignatories']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
-  /* Field: Taxonomy term: Partner Logo */
-  $handler->display->display_options['fields']['field_event_partner_logo']['id'] = 'field_event_partner_logo';
-  $handler->display->display_options['fields']['field_event_partner_logo']['table'] = 'field_data_field_event_partner_logo';
-  $handler->display->display_options['fields']['field_event_partner_logo']['field'] = 'field_event_partner_logo';
-  $handler->display->display_options['fields']['field_event_partner_logo']['label'] = '';
-  $handler->display->display_options['fields']['field_event_partner_logo']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_event_partner_logo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_partner_logo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_event_partner_logo']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
-  /* Field: Taxonomy term: Sponsor Logo */
-  $handler->display->display_options['fields']['field_event_sponsor_logo']['id'] = 'field_event_sponsor_logo';
-  $handler->display->display_options['fields']['field_event_sponsor_logo']['table'] = 'field_data_field_event_sponsor_logo';
-  $handler->display->display_options['fields']['field_event_sponsor_logo']['field'] = 'field_event_sponsor_logo';
-  $handler->display->display_options['fields']['field_event_sponsor_logo']['label'] = '';
-  $handler->display->display_options['fields']['field_event_sponsor_logo']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_event_sponsor_logo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_sponsor_logo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_event_sponsor_logo']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
-  /* Field: Taxonomy term: Venue */
-  $handler->display->display_options['fields']['field_event_venue']['id'] = 'field_event_venue';
-  $handler->display->display_options['fields']['field_event_venue']['table'] = 'field_data_field_event_venue';
-  $handler->display->display_options['fields']['field_event_venue']['field'] = 'field_event_venue';
-  $handler->display->display_options['fields']['field_event_venue']['label'] = '';
-  $handler->display->display_options['fields']['field_event_venue']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_event_venue']['element_label_colon'] = FALSE;
   /* Field: User: First Name */
   $handler->display->display_options['fields']['field_user_first_name']['id'] = 'field_user_first_name';
   $handler->display->display_options['fields']['field_user_first_name']['table'] = 'field_data_field_user_first_name';
@@ -215,68 +142,7 @@ function drupalcebu_certificates_view_views_default_views() {
   $handler->display->display_options['fields']['field_user_last_name']['relationship'] = 'reverse_field_user_participated_events_user';
   $handler->display->display_options['fields']['field_user_last_name']['label'] = '';
   $handler->display->display_options['fields']['field_user_last_name']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_user_last_name']['alter']['text'] = '<div class="certificate-body">
-  <table>
-    <tr>
-      <td class="event-right-column">
-        &nbsp;
-      </td>
-      <td>
-      &nbsp;
-      </td>
-    </tr>
-    <tr>
-      <td class="side-certificate-event">
-        <br /><br /><br /><br />[field_event_tagline]
-      </td>
-      <td class="certificate-name"><br /><br />[field_user_first_name] [field_user_last_name] [field_user_suffix]</td>
-    </tr>
-    <tr>
-      <td>
-        &nbsp;
-      </td>
-      <td>
-      &nbsp;
-      </td>
-    </tr>
-    <tr>
-      <td>
-        &nbsp;
-      </td>
-      <td class="certificate-event">
-        <br /><br />[name]
-      </td>
-    </tr>
-    <tr>
-      <td>
-        &nbsp;
-      </td>
-      <td>
-        [field_event_assignatories]
-      </td>
-    </tr>
-  </table>
-  <table class="certificate-footer">
-    <tr>
-      <td class="footer-header">
-        &nbsp;
-      </td>
-      <td>
-        &nbsp;
-      </td>
-      <td>
-        &nbsp;
-      </td>
-    </tr>
-    <tr>
-      <td class="event-date-venue">
-        <br /><br />Date: [field_event_date]<br />Location: [field_event_venue]
-      </td>
-      <td class="event-sponsors event-logo">[field_event_sponsor_logo]</td>
-      <td class="event-partners event-logo">[field_event_partner_logo]</td>
-    </tr>
-  </table>
-</div>';
+  $handler->display->display_options['fields']['field_user_last_name']['alter']['text'] = '[field_user_first_name] [field_user_last_name] [field_user_suffix]';
   $handler->display->display_options['fields']['field_user_last_name']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: User: Uid */
@@ -289,36 +155,38 @@ function drupalcebu_certificates_view_views_default_views() {
   $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Taxonomy term: Term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['path'] = 'user/%/certificates/%';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Taxonomy vocabulary: Machine name */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['value'] = array(
+    'events' => 'events',
+  );
+  /* Filter criterion: Taxonomy term: Term ID */
+  $handler->display->display_options['filters']['tid_raw']['id'] = 'tid_raw';
+  $handler->display->display_options['filters']['tid_raw']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['tid_raw']['field'] = 'tid_raw';
+  $handler->display->display_options['filters']['tid_raw']['value']['value'] = '1';
+  $handler->display->display_options['path'] = 'user/%/certificates/1';
   $handler->display->display_options['default_page_format'] = 'LETTER';
   $handler->display->display_options['default_page_orientation'] = 'L';
-  $handler->display->display_options['margin_left'] = '0';
-  $handler->display->display_options['margin_right'] = '0';
-  $handler->display->display_options['margin_top'] = '0';
-  $handler->display->display_options['margin_bottom'] = '0';
+  $handler->display->display_options['margin_left'] = '145';
+  $handler->display->display_options['margin_top'] = '52';
   $handler->display->display_options['leading_template'] = '0';
   $handler->display->display_options['template'] = 'certificate_template.pdf';
   $handler->display->display_options['succeed_template'] = '0';
-  $handler->display->display_options['default_font_family'] = 'freesans';
   $handler->display->display_options['default_font_style'] = array(
-    'b' => 0,
+    'b' => 'b',
     'i' => 0,
     'u' => 0,
     'd' => 0,
     'o' => 0,
   );
-  $handler->display->display_options['default_font_size'] = '25';
+  $handler->display->display_options['default_font_size'] = '30';
   $handler->display->display_options['default_text_align'] = 'C';
   $handler->display->display_options['default_font_color'] = '1B5A8F';
-  $handler->display->display_options['css_file'] = 'sites/all/modules/features/drupalcebu_views/drupalcebu_certificates_view/css/style.css';
   $export['certificates'] = $view;
 
   return $export;

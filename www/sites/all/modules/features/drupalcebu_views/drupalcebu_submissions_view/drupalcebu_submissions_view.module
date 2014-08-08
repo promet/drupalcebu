@@ -5,3 +5,40 @@
  */
 
 include_once 'drupalcebu_submissions_view.features.inc';
+
+/**
+ * Implements hook_menu_alter().
+ */
+function drupalcebu_submissions_view_menu_alter(&$items) {
+  $items['user/%/submissions']['access callback'] = 'drupalcebu_submissions_view_submissions_access';
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function drupalcebu_submissions_view_module_implements_alter(&$implementations, $hook) {
+  // Make our hook_menu_alter() executed last so that it is able to see the menu
+  // for views.
+  if ($hook == 'menu_alter') {
+    $group = $implementations['drupalcebu_submissions_view'];
+    unset($implementations['drupalcebu_submissions_view']);
+    $implementations['drupalcebu_submissions_view'] = $group;
+  }
+}
+
+/**
+ * Access callback: Determine whether a user is able to access list of submissions.
+ */
+function drupalcebu_submissions_view_submissions_access() {
+  $uid = arg(1);
+
+  global $user;
+
+  // Only continue if the argument is current user.
+  if ($uid && $uid == $user->uid) {
+    $args = current(func_get_args());
+    return views_access($args);
+  }
+
+  return FALSE;
+}
