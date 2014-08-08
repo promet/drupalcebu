@@ -5,6 +5,7 @@ package = Drupal Cebu Views
 version = 7.x-1.0
 project = drupalcebu_certificates_view
 dependencies[] = date_views
+dependencies[] = drupalcebu_helpers
 dependencies[] = views
 dependencies[] = views_pdf
 features[ctools][] = views:views_default:3.0
