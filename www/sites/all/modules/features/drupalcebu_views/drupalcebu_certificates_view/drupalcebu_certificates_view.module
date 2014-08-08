@@ -5,3 +5,49 @@
  */
 
 include_once 'drupalcebu_certificates_view.features.inc';
+
+/**
+ * Implements hook_menu_alter().
+ */
+function drupalcebu_certificates_view_menu_alter(&$items) {
+  $items['user/%/certificates/%']['access callback'] = 'drupalcebu_certificates_view_certificates_access';
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function drupalcebu_certificates_view_module_implements_alter(&$implementations, $hook) {
+  // Make our hook_menu_alter() executed last so that it is able to see the menu
+  // for views.
+  if ($hook == 'menu_alter') {
+    $group = $implementations['drupalcebu_certificates_view'];
+    unset($implementations['drupalcebu_certificates_view']);
+    $implementations['drupalcebu_certificates_view'] = $group;
+  }
+}
+
+/**
+ * Access callback: Determine whether a user is able to access a certificate.
+ */
+function drupalcebu_certificates_view_certificates_access() {
+  $uid = arg(1);
+  $tid = arg(3);
+
+  global $user;
+
+  // Only continue if the argument is valid taxonomy term.
+  if (($uid && $uid == $user->uid) && ($tid && is_numeric($tid) && ($term = taxonomy_term_load($tid)))) {
+    // Make sure that the user is subscribed to the event when viewing the
+    // certificate otherwise the page would producte a blank PDF file when
+    // visited directly.
+    $wrapper = entity_metadata_wrapper('user', $user);
+    foreach ($wrapper->field_user_participated_events as $delta => $term_wrapper) {
+      if ($term_wrapper->tid->value() == $tid) {
+        $args = current(func_get_args());
+        return views_access($args);
+      }
+    }
+  }
+
+  return FALSE;
+}
