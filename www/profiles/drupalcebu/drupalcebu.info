@@ -38,6 +38,9 @@ dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = update
 dependencies[] = user
+; Custom
+dependencies[] = drupalcebu_helpers
+dependencies[] = drupalcebu_simple_date_type
 ; Date/Time
 dependencies[] = date
 dependencies[] = date_api
@@ -97,7 +100,6 @@ dependencies[] = drupalcebu_recaptcha_settings
 dependencies[] = drupalcebu_pathauto_settings
 dependencies[] = drupalcebu_resource
 dependencies[] = drupalcebu_resources_view
-dependencies[] = drupalcebu_simple_date_type
 dependencies[] = drupalcebu_site_info_config
 dependencies[] = drupalcebu_sitewide_block_settings
 dependencies[] = drupalcebu_sitewide_context
@@ -137,6 +139,8 @@ variables[default_field_group][group_personal_information|user|user|form] = fals
 variables[default_field_group][group_subscription|user|user|form] = false
 variables[default_field_group][group_events|user|user|form] = false
 variables[default_field_group][group_preferences|user|user|form] = false
+variables[drupalcebu_group_urlname] = 'drupal-ph'
+variables[drupalcebu_helpers_events] = 'events'
 variables[field_bundle_settings_node__logo_contest][view_modes][teaser][custom_settings] = true
 variables[field_bundle_settings_node__logo_contest][view_modes][full][custom_settings] = false
 variables[field_bundle_settings_node__logo_contest][view_modes][rss][custom_settings] = false

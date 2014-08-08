@@ -288,7 +288,6 @@ function drupalcebu_install() {
     array('drupalcebu_recaptcha_settings' => array()),
     array('drupalcebu_resource' => array()),
     array('drupalcebu_resources_view' => array()),
-    array('drupalcebu_simple_date_type' => array()),
     array('drupalcebu_site_info_config' => array()),
     array('drupalcebu_sitewide_block_settings' => array()),
     array('drupalcebu_sitewide_context' => array()),

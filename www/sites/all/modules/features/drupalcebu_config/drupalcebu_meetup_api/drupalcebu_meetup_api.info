@@ -5,6 +5,7 @@ package = Drupal Cebu Config
 version = 7.x-1.0
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = drupalcebu_helpers
 dependencies[] = meetup_api
 dependencies[] = strongarm
 features[context][] = meetup_upcoming_events

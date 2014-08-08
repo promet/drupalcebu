@@ -1,0 +1,162 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCebu Custom Helper and Hooks.
+ */
+
+/**
+ * Implements hook_menu_alter().
+ */
+function drupalcebu_helpers_menu_alter(&$items) {
+
+  // Submission Listings
+  $items['user/%/submissions']['access callback'] = 'drupalcebu_helpers_view_own_access';
+
+  // Certificate listings
+  $items['user/%/certificates']['access callback'] = 'drupalcebu_helpers_view_own_access';
+
+  // Certificates
+  $vocabulary = taxonomy_vocabulary_machine_name_load(variable_get('drupalcebu_helpers_events', 'events'));
+  $terms = taxonomy_get_tree($vocabulary->vid);
+  foreach ($terms as $term) {
+    if (isset($items['user/%/certificates/' . $term->tid])) {
+      $items['user/%/certificates/' . $term->tid]['access callback'] = 'drupalcebu_helpers_certificates_access';
+    }
+  }
+}
+
+/**
+* Implements hook_block_info().
+*/
+function drupalcebu_helpers_block_info() {
+  $blocks = array();
+  $blocks['meetup_upcoming'] = array(
+    'info' => t('Upcoming Meetups'),
+  );
+  return $blocks;
+}
+
+/**
+* Implements hook_block_view().
+*/
+function drupalcebu_helpers_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'meetup_upcoming':
+      $block['subject'] = '';
+      $block['content'] = _drupalcebu_helpers_block_content();
+      break;
+  }
+  return $block;
+}
+
+function _drupalcebu_helpers_block_content() {
+  $group = variable_get('drupalcebu_group_urlname', 'drupal-ph');
+  $request = array(
+    'group_urlname' => $group, 
+    'order' => 'time',
+  );
+  $options = array('pages' => 1); 
+  $result = meetup_api_events($request, $options);
+  if (!empty($result->results) && is_array($result->results)) {
+    $title = t('Upcoming ') . t($result->meta->title);
+    $type = 'ul';
+    $attributes = array(
+      'class' => 'meetup-list',
+    );
+
+    $items = array();
+    foreach($result->results as $event) {
+      $event_info = '<h2 class="meetup-event">' . $event->name . '</h2>';
+      if (!empty($event->venue_name) && !empty($event->venue_address1)) {
+        $event_info .= '<div class="meetup-venue"><div class="label">Venue:</div> ' . $event->venue_name . (!empty($event->venue_address1) ? ' (' . $event->venue_address1 . ')' : '') . '</div>';
+      }
+      $event_info .= '<div class="meetup-date"><div class="label">Date:</div>' . format_date(strtotime($event->time), 'medium') . '</div>';
+      $link = 'http://www.meetup.com/'. $group .'/quick_join/?eventId='. $event->id .'&joinFrom=event&response=3';
+     $event_info .= '<div class="meetup-join">' . l(t('Join Meetup'), $link) . '</div>';
+      $items[] = array(
+        'data' => $event_info,
+        'id' => 'meetup-event-' . $event->id,
+        'class' => array('meetup-list-item'),
+      );
+    }
+
+    return theme_item_list(
+      array(
+        'items' => $items,
+        'title' => $title,
+        'type' => $type,
+        'attributes' => $attributes
+      )
+    );
+  }
+  return FALSE;
+}
+
+/**
+ * Implements hook_form_alter()
+ */
+function drupalcebu_helpers_form_alter(&$form, &$form_state, $form_id) {
+  global $user;
+  if ($form_id == 'logo_contest_node_form') {
+    $form['actions']['preview']['#access'] = !$user->uid ? FALSE : TRUE;
+    $form['field_logo_agreement']['#access'] = !$user->uid ? TRUE : FALSE ;
+    $form['field_logo_agreement'][LANGUAGE_NONE]['#required'] = !$user->uid ? TRUE : FALSE;
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function drupalcebu_helpers_module_implements_alter(&$implementations, $hook) {
+  // Make our hook_menu_alter() executed last so that it is able to see the menu
+  // for views.
+  if ($hook == 'menu_alter') {
+    $group = $implementations['drupalcebu_helpers'];
+    unset($implementations['drupalcebu_helpers']);
+    $implementations['drupalcebu_helpers'] = $group;
+  }
+}
+
+/**
+ * Access callback: Determine whether a user is able to access list of certificates.
+ */
+function drupalcebu_helpers_view_own_access() {
+  $uid = arg(1);
+
+  global $user;
+
+  // Only continue if the argument is current user.
+  if ($uid && $uid == $user->uid) {
+    $args = current(func_get_args());
+    return views_access($args);
+  }
+
+  return FALSE;
+}
+
+/**
+ * Access callback: Determine whether a user is able to access a certificate.
+ */
+function drupalcebu_helpers_certificates_access() {
+  $uid = arg(1);
+  $tid = arg(3);
+
+  global $user;
+
+  // Only continue if the argument is valid taxonomy term.
+  if (($uid && $uid == $user->uid) && ($tid && is_numeric($tid) && ($term = taxonomy_term_load($tid)))) {
+    // Make sure that the user is subscribed to the event when viewing the
+    // certificate otherwise the page would producte a blank PDF file when
+    // visited directly.
+    $wrapper = entity_metadata_wrapper('user', $user);
+    foreach ($wrapper->field_user_participated_events as $delta => $term_wrapper) {
+      if ($term_wrapper->tid->value() == $tid) {
+        $args = current(func_get_args());
+        return views_access($args);
+      }
+    }
+  }
+
+  return FALSE;
+}
