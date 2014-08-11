@@ -19,9 +19,6 @@ projects[date][subdir] = "contrib"
 projects[meetup_api][version] = "1.0-beta2"
 projects[meetup_api][subdir] = "contrib"
 
-projects[drupalcebu_pathauto_settings][version] = "1.0"
-projects[drupalcebu_pathauto_settings][subdir] = "contrib"
-
 projects[profiler_builder][version] = "1.1"
 projects[profiler_builder][subdir] = "contrib"
 
@@ -36,6 +33,9 @@ projects[drupalcebu_mail_chimp][subdir] = "contrib"
 
 projects[drupalcebu_meetup_api][version] = "1.0"
 projects[drupalcebu_meetup_api][subdir] = "contrib"
+
+projects[drupalcebu_pathauto_settings][version] = "1.0"
+projects[drupalcebu_pathauto_settings][subdir] = "contrib"
 
 projects[drupalcebu_recaptcha_settings][version] = "1.0"
 projects[drupalcebu_recaptcha_settings][subdir] = "contrib"
@@ -69,6 +69,9 @@ projects[drupalcebu_logo_contest_context][subdir] = "contrib"
 
 projects[drupalcebu_sitewide_context][version] = "1.0"
 projects[drupalcebu_sitewide_context][subdir] = "contrib"
+
+projects[drupalcebu_helpers][version] = "1.0"
++projects[drupalcebu_helpers][subdir] = "contrib"
 
 projects[drupalcebu_simple_date_type][version] = "1.0"
 projects[drupalcebu_simple_date_type][subdir] = "contrib"
