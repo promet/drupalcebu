@@ -38,9 +38,6 @@ dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = update
 dependencies[] = user
-; Custom
-dependencies[] = drupalcebu_helpers
-dependencies[] = drupalcebu_simple_date_type
 ; Date/Time
 dependencies[] = date
 dependencies[] = date_api
@@ -48,6 +45,9 @@ dependencies[] = date_popup
 dependencies[] = date_views
 ; Development
 dependencies[] = meetup_api
+; Drupal Cebu Custom
+dependencies[] = drupalcebu_helpers
+dependencies[] = drupalcebu_simple_date_type
 ; Feeds
 dependencies[] = feeds
 ; Fields
@@ -96,8 +96,8 @@ dependencies[] = drupalcebu_logo_contest_context
 dependencies[] = drupalcebu_mail_chimp
 dependencies[] = drupalcebu_main_menu
 dependencies[] = drupalcebu_meetup_api
-dependencies[] = drupalcebu_recaptcha_settings
 dependencies[] = drupalcebu_pathauto_settings
+dependencies[] = drupalcebu_recaptcha_settings
 dependencies[] = drupalcebu_resource
 dependencies[] = drupalcebu_resources_view
 dependencies[] = drupalcebu_site_info_config
@@ -148,11 +148,21 @@ variables[field_bundle_settings_node__logo_contest][view_modes][search_index][cu
 variables[field_bundle_settings_node__logo_contest][view_modes][search_result][custom_settings] = false
 variables[field_bundle_settings_node__logo_contest][extra_fields][form][title][weight] = '-5'
 variables[field_bundle_settings_node__resource][extra_fields][form][title][weight] = '-5'
+variables[field_bundle_settings_taxonomy_term__events][view_modes][full][custom_settings] = false
+variables[field_bundle_settings_taxonomy_term__events][view_modes][token][custom_settings] = false
+variables[field_bundle_settings_taxonomy_term__events][extra_fields][form][path][weight] = '4'
 variables[field_bundle_settings_taxonomy_term__events][extra_fields][form][name][weight] = '0'
-variables[field_bundle_settings_taxonomy_term__events][extra_fields][form][description][weight] = '7'
-variables[field_bundle_settings_user__user][extra_fields][form][ckeditor][weight] = '7'
-variables[field_bundle_settings_user__user][extra_fields][form][account][weight] = '0'
-variables[field_bundle_settings_user__user][extra_fields][form][timezone][weight] = '5'
+variables[field_bundle_settings_taxonomy_term__events][extra_fields][form][description][weight] = '3'
+variables[field_bundle_settings_taxonomy_term__events][extra_fields][display][description][default] = array (
+  'weight' => '2',
+  'visible' => true,
+)
+variables[field_bundle_settings_user__user][view_modes][full][custom_settings] = false
+variables[field_bundle_settings_user__user][view_modes][token][custom_settings] = false
+variables[field_bundle_settings_user__user][extra_fields][display][summary][default] = array (
+  'weight' => '3',
+  'visible' => false,
+)
 variables[filter_fallback_format] = 'plain_text'
 variables[formblock_expose_logo_contest] = 1
 variables[formblock_show_help_logo_contest] = 1
@@ -283,6 +293,8 @@ variables[node_preview_blog] = '1'
 variables[node_preview_logo_contest] = '1'
 variables[node_preview_resource] = '1'
 variables[node_submitted_resource] = 1
+variables[pathauto_blog_pattern] = 'blogs/[user:name]'
+variables[pathauto_forum_pattern] = '[term:vocabulary]/[term:name]'
 variables[pathauto_node_blog_pattern] = 'blog/[node:title]'
 variables[pathauto_node_logo_contest_pattern] = 'logo/[node:title]'
 variables[pathauto_node_page_pattern] = '[node:title]'
