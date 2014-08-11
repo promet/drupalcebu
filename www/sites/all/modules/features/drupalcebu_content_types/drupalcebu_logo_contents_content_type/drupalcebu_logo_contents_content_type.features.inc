@@ -27,5 +27,6 @@ function drupalcebu_logo_contents_content_type_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }

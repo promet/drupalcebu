@@ -29,6 +29,13 @@ libraries[meetup_api][destination] = "libraries"
 libraries[meetup_api][download][type] = "get"
 libraries[meetup_api][download][url] = "" ; TODO add download URI
 
+; simplepie
+libraries[simplepie][directory_name] = "simplepie"
+libraries[simplepie][type] = "library"
+libraries[simplepie][destination] = "libraries"
+libraries[simplepie][download][type] = "get"
+libraries[simplepie][download][url] = "" ; TODO add download URI
+
 ; tcpdf
 libraries[tcpdf][directory_name] = "tcpdf"
 libraries[tcpdf][type] = "library"

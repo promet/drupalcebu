@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the DrupalCebu User Profile feature.
  */
+
+include_once 'drupalcebu_user_profile.features.inc';

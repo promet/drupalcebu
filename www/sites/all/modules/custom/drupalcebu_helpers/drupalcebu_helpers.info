@@ -1,0 +1,7 @@
+name = DrupalCebu Helpers
+description = A custom module for all helper functions and hooks.
+core = 7.x
+package = Drupal Cebu Custom
+version = 7.x-1.0
+dependencies[] = meetup_api
+project = drupalcebu_helpers

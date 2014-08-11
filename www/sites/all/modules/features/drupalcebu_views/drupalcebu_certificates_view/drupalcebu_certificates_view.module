@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCebu Certificates View feature.
+ */
+
+include_once 'drupalcebu_certificates_view.features.inc';

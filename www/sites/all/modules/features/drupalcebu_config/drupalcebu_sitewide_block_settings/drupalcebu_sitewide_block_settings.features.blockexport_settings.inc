@@ -374,62 +374,6 @@ function drupalcebu_sitewide_block_settings_default_blockexport_settings() {
   'cache' => -1,
 );
   $export['block'][] = array(
-  'bid' => 31,
-  'module' => 'context_ui',
-  'delta' => 'editor',
-  'theme' => 'bartik',
-  'status' => 0,
-  'weight' => 0,
-  'region' => -1,
-  'custom' => 0,
-  'visibility' => 0,
-  'pages' => '',
-  'title' => '',
-  'cache' => 1,
-);
-  $export['block'][] = array(
-  'bid' => 32,
-  'module' => 'context_ui',
-  'delta' => 'devel',
-  'theme' => 'bartik',
-  'status' => 0,
-  'weight' => 0,
-  'region' => -1,
-  'custom' => 0,
-  'visibility' => 0,
-  'pages' => '',
-  'title' => '',
-  'cache' => 1,
-);
-  $export['block'][] = array(
-  'bid' => 36,
-  'module' => 'context_ui',
-  'delta' => 'editor',
-  'theme' => 'seven',
-  'status' => 0,
-  'weight' => 0,
-  'region' => -1,
-  'custom' => 0,
-  'visibility' => 0,
-  'pages' => '',
-  'title' => '',
-  'cache' => 1,
-);
-  $export['block'][] = array(
-  'bid' => 37,
-  'module' => 'context_ui',
-  'delta' => 'devel',
-  'theme' => 'seven',
-  'status' => 0,
-  'weight' => 0,
-  'region' => -1,
-  'custom' => 0,
-  'visibility' => 0,
-  'pages' => '',
-  'title' => '',
-  'cache' => 1,
-);
-  $export['block'][] = array(
   'bid' => 41,
   'module' => 'drupalcebu_meetup_api',
   'delta' => 'meetup_upcoming',
@@ -568,6 +512,34 @@ function drupalcebu_sitewide_block_settings_default_blockexport_settings() {
   'pages' => '',
   'title' => '',
   'cache' => -1,
+);
+  $export['block'][] = array(
+  'bid' => 57,
+  'module' => 'drupalcebu_helpers',
+  'delta' => 'meetup_upcoming',
+  'theme' => 'bartik',
+  'status' => 0,
+  'weight' => 0,
+  'region' => -1,
+  'custom' => 0,
+  'visibility' => 0,
+  'pages' => '',
+  'title' => '',
+  'cache' => 1,
+);
+  $export['block'][] = array(
+  'bid' => 58,
+  'module' => 'drupalcebu_helpers',
+  'delta' => 'meetup_upcoming',
+  'theme' => 'seven',
+  'status' => 0,
+  'weight' => 0,
+  'region' => -1,
+  'custom' => 0,
+  'visibility' => 0,
+  'pages' => '',
+  'title' => '',
+  'cache' => 1,
 );
 return $export;
 }

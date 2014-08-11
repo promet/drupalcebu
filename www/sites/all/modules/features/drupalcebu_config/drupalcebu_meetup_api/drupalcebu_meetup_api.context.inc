@@ -32,11 +32,11 @@ function drupalcebu_meetup_api_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'drupalcebu_meetup_api-meetup_upcoming' => array(
-          'module' => 'drupalcebu_meetup_api',
+        'drupalcebu_helpers-meetup_upcoming' => array(
+          'module' => 'drupalcebu_helpers',
           'delta' => 'meetup_upcoming',
           'region' => 'sidebar_second',
-          'weight' => '-10',
+          'weight' => '-7',
         ),
       ),
     ),
