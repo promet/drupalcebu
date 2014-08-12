@@ -168,8 +168,8 @@ function drupalcebu_certificates_view_views_default_views() {
   $handler->display->display_options['filters']['tid_raw']['id'] = 'tid_raw';
   $handler->display->display_options['filters']['tid_raw']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['tid_raw']['field'] = 'tid_raw';
-  $handler->display->display_options['filters']['tid_raw']['value']['value'] = '1';
-  $handler->display->display_options['path'] = 'user/%/certificates/1';
+  $handler->display->display_options['filters']['tid_raw']['value']['value'] = '3';
+  $handler->display->display_options['path'] = 'user/%/certificates/3';
   $handler->display->display_options['default_page_format'] = 'LETTER';
   $handler->display->display_options['default_page_orientation'] = 'L';
   $handler->display->display_options['margin_left'] = '145';
