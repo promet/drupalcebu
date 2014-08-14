@@ -3,6 +3,7 @@ description = A feature for Logo Contests content type.
 core = 7.x
 package = Drupal Cebu Content Types
 version = 7.x-1.0
+project = drupalcebu_logo_contents_content_type
 dependencies[] = ctools
 dependencies[] = drupalcebu_blog
 dependencies[] = drupalcebu_helpers
