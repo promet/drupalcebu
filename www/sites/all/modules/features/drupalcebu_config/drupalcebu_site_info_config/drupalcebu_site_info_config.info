@@ -3,6 +3,7 @@ description = A feature for Site Information settings.
 core = 7.x
 package = Drupal Cebu Config
 version = 7.x-1.0
+project = drupalcebu_site_info_config
 dependencies[] = ctools
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
