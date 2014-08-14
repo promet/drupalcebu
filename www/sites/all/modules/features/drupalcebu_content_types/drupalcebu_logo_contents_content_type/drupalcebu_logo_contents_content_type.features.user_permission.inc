@@ -22,9 +22,7 @@ function drupalcebu_logo_contents_content_type_user_default_permissions() {
   // Exported permission: 'create logo_contest content'.
   $permissions['create logo_contest content'] = array(
     'name' => 'create logo_contest content',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
