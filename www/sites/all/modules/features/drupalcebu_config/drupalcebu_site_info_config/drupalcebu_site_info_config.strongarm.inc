@@ -42,7 +42,7 @@ function drupalcebu_site_info_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_mail';
-  $strongarm->value = 'drupalcebu@gmail.com';
+  $strongarm->value = 'no-reply@drupalcebu.org';
   $export['site_mail'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -56,7 +56,7 @@ function drupalcebu_site_info_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_slogan';
-  $strongarm->value = '';
+  $strongarm->value = 'Drupal User Group of Cebu, Philippines';
   $export['site_slogan'] = $strongarm;
 
   return $export;
