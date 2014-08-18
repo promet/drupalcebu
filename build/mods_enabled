@@ -15,7 +15,7 @@ drupalcebu_certificate_pdf_view
 drupalcebu_feed_user_import
 drupalcebu_inline_registration_settings
 drupalcebu_logo_contents_content_type
-;drupalcebu_logo_contest_context
+; drupalcebu_logo_contest_context
 drupalcebu_mail_chimp
 drupalcebu_main_menu
 drupalcebu_meetup_api
