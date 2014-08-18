@@ -38,3 +38,5 @@ echo "Running any updates.";
 $drush updb -y
 echo "Clearing caches one last time.";
 $drush cc all -y
+echo "Clearing token cache.";
+drush ev "token_clear_cache();"
