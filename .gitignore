@@ -24,3 +24,5 @@ build/*/ref_db
 *.swp
 .svn
 CVS
+
+*/modules/simpletest
